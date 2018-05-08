@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="#65bfdd"
     android:layout_width="match_parent">
 
     <TextView
@@ -9,6 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="149dp"
         android:text="hello world"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+
+        />
 
 </LinearLayout>
