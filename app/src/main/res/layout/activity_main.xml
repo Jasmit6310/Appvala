@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="38dp"
         android:layout_marginTop="112dp"
-        android:text="Sui Jav ne app vala thata te!!!!"
+        android:text="Sui Jav ne  app vala thata te!!!!"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="99dp" />
 
