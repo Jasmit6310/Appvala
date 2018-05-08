@@ -9,7 +9,7 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="149dp"
-        android:text="hello world"
+        android:text="hello   world"
         android:textSize="30sp"
 
         />
