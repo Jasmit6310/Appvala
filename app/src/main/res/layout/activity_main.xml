@@ -11,6 +11,9 @@
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="210dp"
         android:ems="10"
         android:fontFamily="serif"
         android:inputType="textPersonName"
@@ -18,9 +21,5 @@
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:typeface="monospace"
-        android:layout_gravity="center"
-        android:layout_marginTop="210dp"
-        android:layout_marginLeft="12dp"
-        />
+        android:typeface="monospace" />
 </LinearLayout>

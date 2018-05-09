@@ -31,7 +31,7 @@ public class FirstPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent k=new Intent(FirstPage.this, after2.class);
-                Toast.makeText(FirstPage.this, "Spliting Done", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FirstPage.this, "Split between 2", Toast.LENGTH_SHORT).show();
                 startActivity(k);
                 finish();
             }
@@ -40,7 +40,7 @@ public class FirstPage extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent k=new Intent(FirstPage.this, after3.class);
-                    Toast.makeText(FirstPage.this, "Spliting Done", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FirstPage.this, "Split between 3", Toast.LENGTH_SHORT).show();
                     startActivity(k);
                     finish();
                 }

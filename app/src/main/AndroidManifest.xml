@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".FirstPage" />
         <activity android:name=".after3" />
-        <activity android:name=".after2"></activity>
+        <activity android:name=".after2" />
+        <activity android:name=".finalpage"></activity>
     </application>
 
 </manifest>
