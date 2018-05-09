@@ -30,6 +30,7 @@ public class after3 extends AppCompatActivity {
                 float fs=0;
                 fs=(float)k/3;
                 t1.setText(Float.toString(fs));
+
             }
         });
 

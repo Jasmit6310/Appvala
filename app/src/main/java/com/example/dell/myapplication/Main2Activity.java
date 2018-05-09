@@ -12,11 +12,24 @@ public class Main2Activity extends AppCompatActivity {
     Button R1C1, R1C2, R1C3, R2C1, R2C2, R2C3, R3C1, R3C2, R3C3 ,RE,BACK;
     String b_11, b_12, b_13, b_21, b_22, b_23, b_31, b_32, b_33;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+       setID();
+        R1C1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent k=new Intent(Main2Activity.this, MainActivity.class);
+                Toast.makeText(Main2Activity.this, "Spliting Done", Toast.LENGTH_SHORT).show();
+                startActivity(k);
+                finish();
+            }
+        });
+    }
+
+    public void setID(){
 
         R1C1 = (Button) findViewById(R.id.btn_1_1);
         R1C2 = (Button) findViewById(R.id.btn_1_2);
@@ -28,14 +41,5 @@ public class Main2Activity extends AppCompatActivity {
         R3C2 = (Button) findViewById(R.id.btn_3_2);
         R3C3 = (Button) findViewById(R.id.btn_3_3);
 
-        R1C1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent k=new Intent(Main2Activity.this, MainActivity.class);
-                Toast.makeText(Main2Activity.this, "Spliting Done", Toast.LENGTH_SHORT).show();
-                startActivity(k);
-                finish();
-            }
-        });
     }
 }

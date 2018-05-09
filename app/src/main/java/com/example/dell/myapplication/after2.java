@@ -30,8 +30,6 @@ public class after2 extends AppCompatActivity {
                 int k=Integer.parseInt(e1.getText().toString());
                 float fs=0;
                 fs=(float)k/2;
-
-                if(e1==)
                 t1.setText(Float.toString(fs));
             }
         });
