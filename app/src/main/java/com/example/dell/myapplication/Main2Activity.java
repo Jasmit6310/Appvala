@@ -7,26 +7,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity {
 
-    public Button start;
+    Button sd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        newpage();
-    }
+        setContentView(R.layout.activity_main2);
 
-    public void newpage()
-    {
-        start =(Button) findViewById(R.id.sta);
+        sd = (Button) findViewById(R.id.btn_2);
 
-        start.setOnClickListener(new View.OnClickListener() {
+        sd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent k=new Intent(MainActivity.this, Main2Activity.class);
-                Toast.makeText(MainActivity.this,"Start",Toast.LENGTH_SHORT).show();
+                Intent k=new Intent(Main2Activity.this, MainActivity.class);
+                Toast.makeText(Main2Activity.this, "Spliting Done", Toast.LENGTH_SHORT).show();
+
                 startActivity(k);
                 finish();
             }
