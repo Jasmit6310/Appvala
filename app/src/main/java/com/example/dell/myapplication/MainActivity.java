@@ -1,35 +1,28 @@
 package com.example.dell.myapplication;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+import android.view.Window;
 
 public class MainActivity extends AppCompatActivity {
-
-    public Button start;
+    private static int SPLASH_TIME_OUT = 1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-        newpage();
-    }
-
-    public void newpage()
-    {
-        start =(Button) findViewById(R.id.sta);
-
-        start.setOnClickListener(new View.OnClickListener() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
-                Intent k=new Intent(MainActivity.this, Main2Activity.class);
-                Toast.makeText(MainActivity.this,"Start",Toast.LENGTH_SHORT).show();
-                startActivity(k);
+            public void run() {
+                Intent homeIntent = new Intent(MainActivity.this, FirstPage.class);
+                startActivity(homeIntent);
                 finish();
+
+
             }
-        });
+        }, SPLASH_TIME_OUT);
     }
 }
