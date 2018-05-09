@@ -2,26 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#65bfdd"
+    android:background="#f7f9fa"
     android:layout_width="match_parent"
     >
 
-    <TextView
-        android:id="@+id/textView3"
+
+    <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
-        android:layout_height="149dp"
-        android:text="hello   world"
-        android:textSize="30sp"/>
-
-    <Button
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hey there!!!"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="55dp"
-        android:text="The best app!"/>
-
+        android:ems="10"
+        android:fontFamily="serif"
+        android:inputType="textPersonName"
+        android:text="Bill Spliter & Tax Counter"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:layout_gravity="center"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="12dp"
+        />
 </LinearLayout>
