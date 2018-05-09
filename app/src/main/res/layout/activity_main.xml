@@ -14,7 +14,7 @@
         android:ems="10"
         android:fontFamily="serif"
         android:inputType="textPersonName"
-        android:text="Bill Spliter & Tax Counter"
+        android:text="Bill Spliter and Tax Counter"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
         android:textStyle="bold"

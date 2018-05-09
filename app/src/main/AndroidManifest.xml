@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FirstPage"></activity>
+        <activity android:name=".FirstPage" />
+        <activity android:name=".after3" />
+        <activity android:name=".after2"></activity>
     </application>
 
 </manifest>
