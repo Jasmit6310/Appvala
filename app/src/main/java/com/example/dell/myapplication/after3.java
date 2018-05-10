@@ -12,14 +12,15 @@ import android.widget.Toast;
 
 public class after3 extends AppCompatActivity {
 
-    Button s2;
-
+    Button s2,back;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after3);
 
         s2 = (Button) findViewById(R.id.split3);
+        back = (Button) findViewById(R.id.back);
 
         s2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +32,16 @@ public class after3 extends AppCompatActivity {
                 fs=(float)k/3;
                 t1.setText(Float.toString(fs));
 
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent k =new Intent(after3.this,FirstPage.class);
+                startActivity(k);
+                finish();
             }
         });
 

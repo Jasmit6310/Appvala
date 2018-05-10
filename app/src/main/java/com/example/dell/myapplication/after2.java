@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class after2 extends AppCompatActivity {
 
-    Button s2;
+    Button s2,back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,17 +20,28 @@ public class after2 extends AppCompatActivity {
         setContentView(R.layout.activity_after2);
 
         s2 = (Button) findViewById(R.id.split2);
+        back = (Button) findViewById(R.id.back);
 
         s2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText e1 = (EditText) findViewById(R.id.amount);
-                
+
                 TextView t1 = (TextView) findViewById(R.id.textview);
                 int k=Integer.parseInt(e1.getText().toString());
                 float fs=0;
                 fs=(float)k/2;
                 t1.setText(Float.toString(fs));
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent k =new Intent(after2.this,FirstPage.class);
+                startActivity(k);
+                finish();
             }
         });
 
