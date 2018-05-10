@@ -32,9 +32,9 @@ public class after3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText e1 = (EditText) findViewById(R.id.amount);
-                TextView t1 = (TextView) findViewById(R.id.textView4);
-                TextView t2 = (TextView) findViewById(R.id.textView5);
-                TextView t3 = (TextView) findViewById(R.id.textView6);
+                TextView t1 = (TextView) findViewById(R.id.textView_3_4);
+                TextView t2 = (TextView) findViewById(R.id.textView_3_5);
+                TextView t3 = (TextView) findViewById(R.id.textView_3_6);
 
                 String s;
                 int m=0;
