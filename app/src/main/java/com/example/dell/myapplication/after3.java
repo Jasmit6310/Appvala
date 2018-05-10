@@ -41,9 +41,15 @@ public class after3 extends AppCompatActivity {
 
                 Intent k =new Intent(after3.this,FirstPage.class);
                 startActivity(k);
+                overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
                 finish();
             }
         });
 
+    }
+
+    public void onBackPressed(){
+        startActivity(new Intent(getApplicationContext(),FirstPage.class));
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
     }
 }

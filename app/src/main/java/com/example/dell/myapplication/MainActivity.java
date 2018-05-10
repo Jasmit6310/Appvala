@@ -20,8 +20,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent homeIntent = new Intent(MainActivity.this, FirstPage.class);
                 startActivity(homeIntent);
                 finish();
-
-
             }
         }, SPLASH_TIME_OUT);
     }

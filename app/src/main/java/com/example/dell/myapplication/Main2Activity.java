@@ -3,6 +3,7 @@ package com.example.dell.myapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Explode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -23,8 +24,8 @@ public class Main2Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent k=new Intent(Main2Activity.this, MainActivity.class);
                 Toast.makeText(Main2Activity.this, "Spliting Done", Toast.LENGTH_SHORT).show();
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                 startActivity(k);
-                finish();
             }
         });
     }

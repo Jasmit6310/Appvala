@@ -24,7 +24,7 @@ public class FirstPage extends AppCompatActivity {
                 Intent k=new Intent(FirstPage.this, after2.class);
                 Toast.makeText(FirstPage.this, "Split between 2", Toast.LENGTH_SHORT).show();
                 startActivity(k);
-                finish();
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
             R3.setOnClickListener(new View.OnClickListener() {
@@ -33,10 +33,11 @@ public class FirstPage extends AppCompatActivity {
                     Intent k=new Intent(FirstPage.this, after3.class);
                     Toast.makeText(FirstPage.this, "Split between 3", Toast.LENGTH_SHORT).show();
                     startActivity(k);
-                    finish();
+                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                 }
         });
     }
+
 
     public void setID(){
 
