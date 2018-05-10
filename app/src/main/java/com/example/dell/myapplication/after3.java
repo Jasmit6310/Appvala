@@ -27,11 +27,20 @@ public class after3 extends AppCompatActivity {
             public void onClick(View v) {
                 EditText e1 = (EditText) findViewById(R.id.amount);
                 TextView t1 = (TextView) findViewById(R.id.textview);
-                int k=Integer.parseInt(e1.getText().toString());
-                float fs=0;
-                fs=(float)k/3;
-                t1.setText(Float.toString(fs));
 
+                String s;
+
+                s = e1.getText().toString();
+
+                if (s.length() == 0) {
+                    Toast.makeText(getApplicationContext(), "Enter a valid input!", Toast.LENGTH_SHORT).show();
+                } else {
+                    int k = Integer.parseInt(e1.getText().toString());
+                    float fs = 0;
+                    fs = (float) k / 3;
+                    t1.setText(Float.toString(fs));
+
+                }
             }
         });
 
