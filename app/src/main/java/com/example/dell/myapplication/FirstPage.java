@@ -36,6 +36,16 @@ public class FirstPage extends AppCompatActivity {
                     overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                 }
         });
+
+            R4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent k=new Intent(FirstPage.this, main10.class);
+                    Toast.makeText(FirstPage.this, "Split between 2 max 10", Toast.LENGTH_SHORT).show();
+                    startActivity(k);
+                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                }
+            });
     }
 
 

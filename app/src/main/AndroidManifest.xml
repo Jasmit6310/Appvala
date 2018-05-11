@@ -19,7 +19,8 @@
         <activity android:name=".FirstPage" />
         <activity android:name=".after3" />
         <activity android:name=".after2" />
-        <activity android:name=".finalpage"></activity>
+        <activity android:name=".finalpage" />
+        <activity android:name=".main10"></activity>
     </application>
 
 </manifest>
