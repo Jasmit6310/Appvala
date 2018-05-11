@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#2f3542"
+        tools:context=".friendslist">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Friends List"
+            android:textColor="#f1f2f6"
+            android:textSize="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="26dp"
+            android:layout_marginLeft="46dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:text="Friend"
+                android:textSize="26dp"
+                android:textColor="#f1f2f6"
+                android:layout_margin="16dp"    />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="53dp"
+                android:text="Is the amount paid?"
+                android:textColor="#f1f2f6"/>
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:text="Amount"
+                android:textSize="26dp"
+                android:layout_margin="16dp"
+                android:textColor="#f1f2f6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_margin="16dp"
+                android:id="@+id/name_1"/>
+
+            <CheckBox
+                android:layout_width="26dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/checkbox_1"/>
+
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/amount_1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_margin="16dp"
+                android:id="@+id/name_2"/>
+
+            <CheckBox
+                android:layout_width="26dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/checkbox_2"/>
+
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/amount_2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_margin="16dp"
+                android:id="@+id/name_3"/>
+
+            <CheckBox
+                android:layout_width="26dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/checkbox_3"/>
+
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/amount_3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_margin="16dp"
+                android:id="@+id/name_4"/>
+
+            <CheckBox
+                android:layout_width="26dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/checkbox_4"/>
+
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/amount_4"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_margin="16dp"
+                android:id="@+id/name_5"/>
+
+            <CheckBox
+                android:layout_width="26dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/checkbox_5"/>
+
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/amount_5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_margin="16dp"
+                android:id="@+id/name_6"/>
+
+            <CheckBox
+                android:layout_width="26dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/checkbox_6"/>
+
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/amount_6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_margin="16dp"
+                android:id="@+id/name_7"/>
+
+            <CheckBox
+                android:layout_width="26dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/checkbox_7"/>
+
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/amount_7"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_margin="16dp"
+                android:id="@+id/name_8"/>
+
+            <CheckBox
+                android:layout_width="26dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/checkbox_8"/>
+
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/amount_8"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_margin="16dp"
+                android:id="@+id/name_9"/>
+
+            <CheckBox
+                android:layout_width="26dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/checkbox_9"/>
+
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/amount_9"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_margin="16dp"
+                android:id="@+id/name_10"/>
+
+            <CheckBox
+                android:layout_width="26dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/checkbox_10"/>
+
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="44dp"
+                android:background="@drawable/button_disabled"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/amount_10"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_go"
+            android:layout_width="125dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="26dp"
+            android:layout_marginTop="26dp"
+            android:background="#747d8c"
+            android:text="GO!"
+            android:textSize="26sp" />
+
+    </LinearLayout>
+
+</ScrollView>
