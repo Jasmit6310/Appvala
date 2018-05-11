@@ -107,7 +107,7 @@
             android:layout_width="137dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView"
-            android:hint="Amount 2" />
+            android:hint="Amount  2" />
 
         <CheckBox
             android:id="@+id/checkBox_2_1"
