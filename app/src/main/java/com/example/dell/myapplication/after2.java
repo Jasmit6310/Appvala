@@ -78,7 +78,7 @@ public class after2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent k =new Intent(after2.this,FirstPage.class);
+                Intent k =new Intent(after2.this,Main2Activity.class);
                 startActivity(k);
                 overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
                 finish();
@@ -88,7 +88,7 @@ public class after2 extends AppCompatActivity {
     }
 
     public void onBackPressed(){
-        startActivity(new Intent(getApplicationContext(),FirstPage.class));
+        startActivity(new Intent(getApplicationContext(),Main2Activity.class));
         overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
     }
 }
