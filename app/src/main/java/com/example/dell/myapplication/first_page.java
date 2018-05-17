@@ -23,9 +23,9 @@ public class first_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 s = R2.getText().toString();
-                Intent k=new Intent(FirstPage.this, friendslist.class);
+                Intent k=new Intent(first_page.this, friendslist.class);
                 k.putExtra("number",s);
-                Toast.makeText(FirstPage.this, "Split between 2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(first_page.this, "Split between 2", Toast.LENGTH_SHORT).show();
                 startActivity(k);
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
@@ -34,9 +34,9 @@ public class first_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 s = R3.getText().toString();
-                Intent k=new Intent(FirstPage.this, friendslist.class);
+                Intent k=new Intent(first_page.this, friendslist.class);
                 k.putExtra("number",s);
-                Toast.makeText(FirstPage.this, "Split between 3", Toast.LENGTH_SHORT).show();
+                Toast.makeText(first_page.this, "Split between 3", Toast.LENGTH_SHORT).show();
                 startActivity(k);
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
@@ -46,9 +46,9 @@ public class first_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 s = R4.getText().toString();
-                Intent k=new Intent(FirstPage.this, friendslist.class);
+                Intent k=new Intent(first_page.this, friendslist.class);
                 k.putExtra("number",s);
-                Toast.makeText(FirstPage.this, "Split between 4", Toast.LENGTH_SHORT).show();
+                Toast.makeText(first_page.this, "Split between 4", Toast.LENGTH_SHORT).show();
                 startActivity(k);
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
