@@ -8,6 +8,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Arrays;
+
 public class friendslist extends AppCompatActivity {
 
     EditText[] names = new EditText[10];
@@ -18,12 +20,15 @@ public class friendslist extends AppCompatActivity {
     Button go;
     String amo_str;
     int num_of_enables,total_amount,temp;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friendslist);
         setID();
+
+        for(int i=0;i<num_of_enables;i++)
+            names[i].setText("");
+
         num_of_enables=Integer.parseInt(getIntent().getStringExtra("number"));
 
         for(int i = num_of_enables ; i<10 ; i++){
@@ -152,34 +157,69 @@ public class friendslist extends AppCompatActivity {
 
                 for(int i=0;i<num_of_enables;i++)
                 {
-                    amo_str=amounts[i].getText().toString();
-                    temp=Integer.parseInt(amo_str);
+                    if(amounts[i].getText().toString().length()!=0) {
+                        amo_str = amounts[i].getText().toString();
+                        temp = Integer.parseInt(amo_str);
 
-                    amo[i]=temp;
-                    total_amount+=amo[i];
+                        amo[i] = temp;
+                        total_amount += amo[i];
+                    }
                 }
-                Toast.makeText(friendslist.this,"total amount "+total_amount,Toast.LENGTH_SHORT).show();
 
+                for(int i=0;i<num_of_enables;i++){
+                    username[i]=names[i].getText().toString();
+                }
 
+                if(!check_for_boxes()){
+                    Toast.makeText(getApplicationContext(),"At least one person should have paid the bill!",Toast.LENGTH_SHORT).show();
+                }
+                else if(!check_for_no_name()) {
+                    Toast.makeText(getApplicationContext(), "Enter the name of all the users!", Toast.LENGTH_SHORT).show();
 
+                }
+                if(total_amount==0)
+                    Toast.makeText(getApplicationContext(),"The total cannot be zero!",Toast.LENGTH_SHORT).show();
+
+                else
+                            Toast.makeText(friendslist.this,"total amount "+total_amount,Toast.LENGTH_SHORT).show();
             }
         });
-
-
-        /*go.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                for(int i=0;i<num_of_enables;i++){
-                    username[i].
-                }
-                if(!check_for_no_name())
-                    Toast.makeText(getApplicationContext(),"Enter the names of all the users!", Toast.LENGTH_SHORT).show();
-            }
-        });*/
-
     }
 
-    public void setID(){
+    public boolean check_for_no_name(){  // Checks if all the users have given their names or not!
+        boolean ans=true;
+
+        for(int i=0;i<num_of_enables;i++)
+            if(username[i].length()==0)
+            {
+                ans=false;
+                break;
+            }
+
+        if(ans)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean check_for_boxes(){  // Checks if at least one box is checked!
+        boolean ans=false;
+
+        for(int i=0;i<num_of_enables;i++){
+            if(paid[i].isChecked())
+            {
+                ans=true;
+                break;
+            }
+        }
+
+        if(ans)
+            return true;
+        else
+            return false;
+    }
+
+    public void setID(){  // Sets the IDs
         // Names of the friends
         names[0] = findViewById(R.id.name_1);
         names[1] = findViewById(R.id.name_2);
@@ -222,8 +262,4 @@ public class friendslist extends AppCompatActivity {
         go = findViewById(R.id.btn_go);
     }
 
-    // Checks if the user has entered the name or not!
-    //public boolean check_for_no_name(){
-
-    //}
 }
