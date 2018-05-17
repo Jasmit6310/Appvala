@@ -14,8 +14,10 @@ public class friendslist extends AppCompatActivity {
     EditText[] amounts = new EditText[10];
     CheckBox[] paid = new CheckBox[10];
     String[] username = new String[10];
+    int[] amo=new int[10];
     Button go;
-    int num_of_enables;
+    String amo_str;
+    int num_of_enables,total_amount,temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -142,6 +144,27 @@ public class friendslist extends AppCompatActivity {
                     amounts[9].setEnabled(false);
             }
         });
+
+
+        go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                for(int i=0;i<num_of_enables;i++)
+                {
+                    amo_str=amounts[i].getText().toString();
+                    temp=Integer.parseInt(amo_str);
+
+                    amo[i]=temp;
+                    total_amount+=amo[i];
+                }
+                Toast.makeText(friendslist.this,"total amount "+total_amount,Toast.LENGTH_SHORT).show();
+
+
+
+            }
+        });
+
 
         /*go.setOnClickListener(new View.OnClickListener() {
             @Override
