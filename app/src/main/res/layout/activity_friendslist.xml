@@ -59,7 +59,6 @@
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_margin="16dp"
-                android:inputType="textPersonName"
                 android:id="@+id/name_1"/>
 
             <CheckBox
@@ -67,6 +66,7 @@
                 android:layout_height="16dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="25dp"
+
                 android:id="@+id/checkbox_1"/>
 
             <EditText
@@ -75,7 +75,6 @@
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
-                android:inputType="numberDecimal"
                 android:id="@+id/amount_1"/>
 
         </LinearLayout>
@@ -89,7 +88,6 @@
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_margin="16dp"
-                android:inputType="textPersonName"
                 android:id="@+id/name_2"/>
 
             <CheckBox
@@ -105,7 +103,6 @@
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
-                android:inputType="numberDecimal"
                 android:id="@+id/amount_2"/>
 
         </LinearLayout>
@@ -119,7 +116,6 @@
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_margin="16dp"
-                android:inputType="textPersonName"
                 android:id="@+id/name_3"/>
 
             <CheckBox
@@ -135,7 +131,6 @@
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
-                android:inputType="numberDecimal"
                 android:id="@+id/amount_3"/>
 
         </LinearLayout>
@@ -149,7 +144,6 @@
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_margin="16dp"
-                android:inputType="textPersonName"
                 android:id="@+id/name_4"/>
 
             <CheckBox
@@ -165,7 +159,6 @@
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
-                android:inputType="numberDecimal"
                 android:id="@+id/amount_4"/>
 
         </LinearLayout>
@@ -179,7 +172,6 @@
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_margin="16dp"
-                android:inputType="textPersonName"
                 android:id="@+id/name_5"/>
 
             <CheckBox
@@ -195,7 +187,6 @@
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
-                android:inputType="numberDecimal"
                 android:id="@+id/amount_5"/>
 
         </LinearLayout>
@@ -209,7 +200,6 @@
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_margin="16dp"
-                android:inputType="textPersonName"
                 android:id="@+id/name_6"/>
 
             <CheckBox
@@ -225,7 +215,6 @@
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
-                android:inputType="numberDecimal"
                 android:id="@+id/amount_6"/>
 
         </LinearLayout>
@@ -239,7 +228,6 @@
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_margin="16dp"
-                android:inputType="textPersonName"
                 android:id="@+id/name_7"/>
 
             <CheckBox
@@ -255,7 +243,6 @@
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
-                android:inputType="numberDecimal"
                 android:id="@+id/amount_7"/>
 
         </LinearLayout>
@@ -269,7 +256,6 @@
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_margin="16dp"
-                android:inputType="textPersonName"
                 android:id="@+id/name_8"/>
 
             <CheckBox
@@ -285,7 +271,6 @@
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
-                android:inputType="numberDecimal"
                 android:id="@+id/amount_8"/>
 
         </LinearLayout>
@@ -299,7 +284,6 @@
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_margin="16dp"
-                android:inputType="textPersonName"
                 android:id="@+id/name_9"/>
 
             <CheckBox
@@ -315,7 +299,6 @@
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
-                android:inputType="numberDecimal"
                 android:id="@+id/amount_9"/>
 
         </LinearLayout>
@@ -329,7 +312,6 @@
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_margin="16dp"
-                android:inputType="textPersonName"
                 android:id="@+id/name_10"/>
 
             <CheckBox
@@ -345,7 +327,6 @@
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
-                android:inputType="numberDecimal"
                 android:id="@+id/amount_10"/>
 
         </LinearLayout>
