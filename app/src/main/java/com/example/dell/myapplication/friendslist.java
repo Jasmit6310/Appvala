@@ -178,7 +178,7 @@ public class friendslist extends AppCompatActivity {
 
                 }
                 if(total_amount==0)
-                    Toast.makeText(getApplicationContext(),"The total cannot be zero!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(friendslist.this,"The total cannot be zero!",Toast.LENGTH_SHORT).show();
 
                 else
                             Toast.makeText(friendslist.this,"total amount "+total_amount,Toast.LENGTH_SHORT).show();
