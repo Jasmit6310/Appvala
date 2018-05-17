@@ -22,9 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".after2" />
-        <activity android:name=".Main2Activity"
- />
-        <activity android:name=".friendslist"></activity>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".friendslist" />
+        <activity android:name=".first_page"></activity>
     </application>
 
 </manifest>
