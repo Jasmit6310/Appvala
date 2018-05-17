@@ -23,7 +23,8 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent k=new Intent(Main2Activity.this, friendslist.class);
-                Toast.makeText(Main2Activity.this, "Spliting Done", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Main2Activity.this, "Splitting Done", Toast.LENGTH_SHORT).show();
+                k.putExtra("number","2");
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                 startActivity(k);
             }
