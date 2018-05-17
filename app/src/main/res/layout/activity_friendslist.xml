@@ -70,7 +70,7 @@
                 android:id="@+id/checkbox_1"/>
 
             <EditText
-                android:layout_width="125dp"
+                android:layout_width="100dp"
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
@@ -100,7 +100,7 @@
                 android:id="@+id/checkbox_2"/>
 
             <EditText
-                android:layout_width="125dp"
+                android:layout_width="100dp"
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
@@ -130,7 +130,7 @@
                 android:id="@+id/checkbox_3"/>
 
             <EditText
-                android:layout_width="125dp"
+                android:layout_width="100dp"
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
@@ -160,7 +160,7 @@
                 android:id="@+id/checkbox_4"/>
 
             <EditText
-                android:layout_width="125dp"
+                android:layout_width="100dp"
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
@@ -190,7 +190,7 @@
                 android:id="@+id/checkbox_5"/>
 
             <EditText
-                android:layout_width="125dp"
+                android:layout_width="100dp"
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
@@ -220,7 +220,7 @@
                 android:id="@+id/checkbox_6"/>
 
             <EditText
-                android:layout_width="125dp"
+                android:layout_width="100dp"
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
@@ -250,7 +250,7 @@
                 android:id="@+id/checkbox_7"/>
 
             <EditText
-                android:layout_width="125dp"
+                android:layout_width="100dp"
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
@@ -280,7 +280,7 @@
                 android:id="@+id/checkbox_8"/>
 
             <EditText
-                android:layout_width="125dp"
+                android:layout_width="100dp"
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
@@ -310,7 +310,7 @@
                 android:id="@+id/checkbox_9"/>
 
             <EditText
-                android:layout_width="125dp"
+                android:layout_width="100dp"
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
@@ -340,7 +340,7 @@
                 android:id="@+id/checkbox_10"/>
 
             <EditText
-                android:layout_width="125dp"
+                android:layout_width="100dp"
                 android:layout_height="44dp"
                 android:background="@drawable/button_disabled"
                 android:layout_marginTop="16dp"
