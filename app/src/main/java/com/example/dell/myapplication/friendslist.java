@@ -2,6 +2,7 @@ package com.example.dell.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
@@ -10,6 +11,7 @@ public class friendslist extends AppCompatActivity {
     EditText[] names = new EditText[10];
     EditText[] amounts = new EditText[10];
     CheckBox[] paid = new CheckBox[10];
+    String[] username = new String[10];
     int num_of_enables;
 
     @Override
@@ -24,16 +26,119 @@ public class friendslist extends AppCompatActivity {
             paid[i].setEnabled(false);
             amounts[i].setEnabled(false);
         }
-    }
 
+        for(int i=0;i<num_of_enables;i++)
+            amounts[i].setEnabled(false);
 
-    public void cal()
-    {
+        paid[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(paid[0].isChecked()){
+                    amounts[0].setEnabled(true);
+                }
+                else
+                    amounts[0].setEnabled(false);
+            }
+        });
 
+        paid[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(paid[1].isChecked()){
+                    amounts[1].setEnabled(true);
+                }
+                else
+                    amounts[1].setEnabled(false);
+            }
+        });
 
+        paid[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(paid[2].isChecked()){
+                    amounts[2].setEnabled(true);
+                }
+                else
+                    amounts[2].setEnabled(false);
+            }
+        });
 
+        paid[3].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(paid[3].isChecked()){
+                    amounts[3].setEnabled(true);
+                }
+                else
+                    amounts[3].setEnabled(false);
+            }
+        });
 
+        paid[4].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(paid[4].isChecked()){
+                    amounts[4].setEnabled(true);
+                }
+                else
+                    amounts[4].setEnabled(false);
+            }
+        });
 
+        paid[5].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(paid[5].isChecked()){
+                    amounts[5].setEnabled(true);
+                }
+                else
+                    amounts[5].setEnabled(false);
+            }
+        });
+
+        paid[6].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(paid[6].isChecked()){
+                    amounts[6].setEnabled(true);
+                }
+                else
+                    amounts[6].setEnabled(false);
+            }
+        });
+
+        paid[7].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(paid[7].isChecked()){
+                    amounts[7].setEnabled(true);
+                }
+                else
+                    amounts[7].setEnabled(false);
+            }
+        });
+
+        paid[8].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(paid[8].isChecked()){
+                    amounts[8].setEnabled(true);
+                }
+                else
+                    amounts[8].setEnabled(false);
+            }
+        });
+
+        paid[9].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(paid[9].isChecked()){
+                    amounts[9].setEnabled(true);
+                }
+                else
+                    amounts[9].setEnabled(false);
+            }
+        });
 
     }
 
