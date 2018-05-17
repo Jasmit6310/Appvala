@@ -3,8 +3,10 @@ package com.example.dell.myapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class friendslist extends AppCompatActivity {
 
@@ -12,6 +14,7 @@ public class friendslist extends AppCompatActivity {
     EditText[] amounts = new EditText[10];
     CheckBox[] paid = new CheckBox[10];
     String[] username = new String[10];
+    Button go;
     int num_of_enables;
 
     @Override
@@ -140,6 +143,17 @@ public class friendslist extends AppCompatActivity {
             }
         });
 
+        /*go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for(int i=0;i<num_of_enables;i++){
+                    username[i].
+                }
+                if(!check_for_no_name())
+                    Toast.makeText(getApplicationContext(),"Enter the names of all the users!", Toast.LENGTH_SHORT).show();
+            }
+        });*/
+
     }
 
     public void setID(){
@@ -180,6 +194,13 @@ public class friendslist extends AppCompatActivity {
         paid[8] = findViewById(R.id.checkbox_9);
         paid[9] = findViewById(R.id.checkbox_10);
 
+        //go button
+
+        go = findViewById(R.id.btn_go);
     }
 
+    // Checks if the user has entered the name or not!
+    //public boolean check_for_no_name(){
+
+    //}
 }
