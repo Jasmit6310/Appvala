@@ -26,6 +26,17 @@ public class friendslist extends AppCompatActivity {
         }
     }
 
+
+    public void cal()
+    {
+
+
+
+
+
+
+    }
+
     public void setID(){
         // Names of the friends
         names[0] = findViewById(R.id.name_1);

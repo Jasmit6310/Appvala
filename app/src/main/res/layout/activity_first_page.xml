@@ -32,18 +32,21 @@
             android:layout_marginTop="100dp">
 
             <Button
+                android:id="@+id/btn_1_1"
+                style="@android:style/Widget.Button.Small"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="50dp"
                 android:background="#dfe4ea"
                 android:text="2"
-                android:id="@+id/btn_1_1"/>
+                android:textSize="50dp" />
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+
+                style="@android:style/Widget.Button.Small"
                 android:textSize="50dp"
                 android:background="#dfe4ea"
                 android:text="3"
@@ -53,6 +56,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@android:style/Widget.Button.Small"
                 android:textSize="50dp"
                 android:background="#dfe4ea"
                 android:text="4"
@@ -72,6 +76,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textSize="50dp"
+                style="@android:style/Widget.Button.Small"
                 android:background="#dfe4ea"
                 android:text="5"
                 android:id="@+id/btn_2_1"/>
@@ -81,6 +86,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textSize="50dp"
+                style="@android:style/Widget.Button.Small"
                 android:background="#dfe4ea"
                 android:text="6"
                 android:id="@+id/btn_2_2"/>
@@ -90,6 +96,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textSize="50dp"
+                style="@android:style/Widget.Button.Small"
                 android:background="#dfe4ea"
                 android:text="7"
                 android:id="@+id/btn_2_3"/>
@@ -108,6 +115,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textSize="50dp"
+                style="@android:style/Widget.Button.Small"
                 android:background="#dfe4ea"
                 android:text="8"
                 android:id="@+id/btn_3_1"/>
@@ -116,6 +124,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@android:style/Widget.Button.Small"
                 android:textSize="50dp"
                 android:background="#dfe4ea"
                 android:text="9"
@@ -126,6 +135,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textSize="50dp"
+                style="@android:style/Widget.Button.Small"
                 android:background="#dfe4ea"
                 android:text="10"
                 android:id="@+id/btn_3_3"/>
