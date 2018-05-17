@@ -29,6 +29,8 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(k);
             }
         });
+
+
     }
 
     public void setID(){
