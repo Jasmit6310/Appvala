@@ -170,7 +170,7 @@ public class friendslist extends AppCompatActivity {
                     amo[i]=temp;
                     total_amount+=amo[i];
 
-                    username[i]=names[i].getText().toString();
+
                 }
                 devided_amount=total_amount/num_of_enables;      // amount which  everyone has to pay
                 Toast.makeText(friendslist.this,"devided amount "+devided_amount,Toast.LENGTH_SHORT).show();
@@ -208,6 +208,10 @@ public class friendslist extends AppCompatActivity {
                         nutral[q2]=i;
                     }
                 }
+
+
+
+
 
                 for(int i=0;i<num_of_enables;i++){
                     username[i]=names[i].getText().toString();
