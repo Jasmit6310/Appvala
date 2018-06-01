@@ -8,6 +8,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Arrays;
+
 public class friendslist extends AppCompatActivity {
 
     EditText[] names = new EditText[10];
@@ -26,6 +28,10 @@ public class friendslist extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friendslist);
         setID();
+
+        for(int i=0;i<num_of_enables;i++)
+            names[i].setText("");
+
         num_of_enables=Integer.parseInt(getIntent().getStringExtra("number"));
 
         for(int i = num_of_enables ; i<10 ; i++){
@@ -154,9 +160,13 @@ public class friendslist extends AppCompatActivity {
 
                 for(int i=0;i<num_of_enables;i++)
                 {
-                    amo_str=amounts[i].getText().toString();
-                    temp=Integer.parseInt(amo_str);
+                    if(amounts[i].getText().toString().length()!=0) {
+                        amo_str = amounts[i].getText().toString();
+                        temp = Integer.parseInt(amo_str);
 
+                        amo[i] = temp;
+                        total_amount += amo[i];
+                    }
                     amo[i]=temp;
                     total_amount+=amo[i];
 
@@ -199,12 +209,37 @@ public class friendslist extends AppCompatActivity {
                     }
                 }
 
+                for(int i=0;i<num_of_enables;i++){
+                    username[i]=names[i].getText().toString();
+                }
 
+                if(!check_for_boxes()){
+                    Toast.makeText(getApplicationContext(),"At least one person should have paid the bill!",Toast.LENGTH_SHORT).show();
+                }
+                else if(!check_for_no_name()) {
+                    Toast.makeText(getApplicationContext(), "Enter the name of all the users!", Toast.LENGTH_SHORT).show();
 
+                }
+                if(total_amount==0)
+                    Toast.makeText(friendslist.this,"The total cannot be zero!",Toast.LENGTH_SHORT).show();
+
+                else
+                            Toast.makeText(friendslist.this,"total amount "+total_amount,Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
                 // jene levana 6 ene priority apishu
               int x=0;
+    public boolean check_for_no_name(){  // Checks if all the users have given their names or not!
+        boolean ans=true;
 
+        for(int i=0;i<num_of_enables;i++)
+            if(username[i].length()==0)
+            {
+                ans=false;
+                break;
+            }
                   /*if (paid_amount[levana[0]]<=paid_amount[devana[0]])
                   {
                       result[0]=" "+username[levana[0]]+"will collect Rs."+paid_amount[levana[0]]+"from "+paid_amount[devana[0]];
@@ -217,10 +252,17 @@ public class friendslist extends AppCompatActivity {
                       paid_amount[levana[0]]-=paid_amount[devana[0]];
                       paid_amount[devana[0]]=0;
 
+        if(ans)
+            return true;
+        else
+            return false;
+    }
                   }
                   */
 
 
+    public boolean check_for_boxes(){  // Checks if at least one box is checked!
+        boolean ans=false;
                   while(paid_amount[levana[0]]!=0)
                   {
                       if(paid_amount[levana[0]]<paid_amount[devana[x]])
@@ -235,6 +277,13 @@ public class friendslist extends AppCompatActivity {
                           paid_amount[levana[0]]-=paid_amount[devana[0]];
                           paid_amount[devana[0]]=0;
 
+        for(int i=0;i<num_of_enables;i++){
+            if(paid[i].isChecked())
+            {
+                ans=true;
+                break;
+            }
+        }
                       }
                       else
                       {
@@ -256,9 +305,13 @@ public class friendslist extends AppCompatActivity {
 
 
 
+        if(ans)
+            return true;
+        else
+            return false;
     }
 
-    public void setID(){
+    public void setID(){  // Sets the IDs
         // Names of the friends
         names[0] = findViewById(R.id.name_1);
         names[1] = findViewById(R.id.name_2);
