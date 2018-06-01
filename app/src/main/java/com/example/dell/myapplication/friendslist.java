@@ -14,10 +14,12 @@ public class friendslist extends AppCompatActivity {
     EditText[] amounts = new EditText[10];
     CheckBox[] paid = new CheckBox[10];
     String[] username = new String[10];
+    String[] result =new String[10];
+    int[] paid_amount=new int[10];
     int[] amo=new int[10];
     Button go;
     String amo_str;
-    int num_of_enables,total_amount,temp;
+    int num_of_enables,total_amount,temp,devided_amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,8 +159,95 @@ public class friendslist extends AppCompatActivity {
 
                     amo[i]=temp;
                     total_amount+=amo[i];
+
+                    username[i]=names[i].getText().toString();
                 }
-                Toast.makeText(friendslist.this,"total amount "+total_amount,Toast.LENGTH_SHORT).show();
+                devided_amount=total_amount/num_of_enables;      // amount which  everyone has to pay
+                Toast.makeText(friendslist.this,"devided amount "+devided_amount,Toast.LENGTH_SHORT).show();
+
+                for(int i=0;i<num_of_enables;i++)
+                {
+                    paid_amount[i]=devided_amount;    // paid array stores amount which have to pay of frnd at index i
+                }
+
+                int[] levana=new int[10];     // ena index jene paisa levana 6
+                int[] devana=new int[10];    // ena  index jene paisa devana 6
+                int[] nutral = new int[10]  ; // vahivat  puro
+
+                int q=0,q1=0,q2=0;
+
+                for(int i=0;i<num_of_enables;i++)
+                {
+
+
+                    if(paid_amount[i]> amo[i])     // paid_amount e ketla paisa devana e nbatave 6  amo e ketla apela e  btave 6
+                    {
+                        devana[q]=i;
+                        paid_amount[i]-=amo[i];
+                        q++;
+                    }
+                    else if(paid_amount[i]<amo[i])
+                    {
+                        levana[q1]=i;
+                        paid_amount[i]-=amo[i];
+                        paid_amount[i]=(-1)*paid_amount[i];
+                        q1++;
+                    }
+                    else
+                    {
+                        nutral[q2]=i;
+                    }
+                }
+
+
+
+
+                // jene levana 6 ene priority apishu
+              int x=0;
+
+                  /*if (paid_amount[levana[0]]<=paid_amount[devana[0]])
+                  {
+                      result[0]=" "+username[levana[0]]+"will collect Rs."+paid_amount[levana[0]]+"from "+paid_amount[devana[0]];
+                      paid_amount[devana[0]]-=paid_amount[levana[0]];
+                      paid_amount[levana[0]]=0;
+                  }
+                  else
+                  {
+                      result[0]=" "+username[levana[0]]+"will collect Rs."+paid_amount[devana[0]]+"from "+paid_amount[devana[0]];
+                      paid_amount[levana[0]]-=paid_amount[devana[0]];
+                      paid_amount[devana[0]]=0;
+
+                  }
+                  */
+
+
+                  while(paid_amount[levana[0]]!=0)
+                  {
+                      if(paid_amount[levana[0]]<paid_amount[devana[x]])
+                      {
+                          result[x]=" "+username[levana[0]]+"will collect Rs."+paid_amount[levana[0]]+"from "+paid_amount[devana[x]];
+                          paid_amount[devana[0]]-=paid_amount[levana[0]];
+                          paid_amount[levana[0]]=0;
+                      }
+                      else if(paid_amount[levana[0]]>paid_amount[devana[x]])
+                      {
+                          result[x]=" "+username[levana[0]]+"will collect Rs."+paid_amount[devana[x]]+"from "+paid_amount[devana[x]];
+                          paid_amount[levana[0]]-=paid_amount[devana[0]];
+                          paid_amount[devana[0]]=0;
+
+                      }
+                      else
+                      {
+                          result[x]=" "+username[levana[0]]+"will collect Rs."+paid_amount[devana[x]]+"from "+paid_amount[devana[x]];
+                          paid_amount[levana[0]]=0;
+                          paid_amount[devana[0]]=0;
+                      }
+                    x++;
+                  }
+
+
+
+
 
 
 
@@ -166,16 +255,6 @@ public class friendslist extends AppCompatActivity {
         });
 
 
-        /*go.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                for(int i=0;i<num_of_enables;i++){
-                    username[i].
-                }
-                if(!check_for_no_name())
-                    Toast.makeText(getApplicationContext(),"Enter the names of all the users!", Toast.LENGTH_SHORT).show();
-            }
-        });*/
 
     }
 
