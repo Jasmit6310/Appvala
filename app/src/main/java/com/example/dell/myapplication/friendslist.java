@@ -16,12 +16,12 @@ public class friendslist extends AppCompatActivity {
     EditText[] amounts = new EditText[10];
     CheckBox[] paid = new CheckBox[10];
     String[] username = new String[10];
-    String[] result =new String[10];
-    int[] paid_amount=new int[10];
-    int[] amo=new int[10];
+    String[] result = new String[10];
+    int[] paid_amount = new int[10];
+    int[] amo = new int[10];
     Button go;
     String amo_str;
-    int num_of_enables,total_amount,temp,devided_amount;
+    int num_of_enables, total_amount, temp, devided_amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,27 +29,26 @@ public class friendslist extends AppCompatActivity {
         setContentView(R.layout.activity_friendslist);
         setID();
 
-        for(int i=0;i<num_of_enables;i++)
+        for (int i = 0; i < num_of_enables; i++)
             names[i].setText("");
 
-        num_of_enables=Integer.parseInt(getIntent().getStringExtra("number"));
+        num_of_enables = Integer.parseInt(getIntent().getStringExtra("number"));
 
-        for(int i = num_of_enables ; i<10 ; i++){
+        for (int i = num_of_enables; i < 10; i++) {
             names[i].setEnabled(false);
             paid[i].setEnabled(false);
             amounts[i].setEnabled(false);
         }
 
-        for(int i=0;i<num_of_enables;i++)
+        for (int i = 0; i < num_of_enables; i++)
             amounts[i].setEnabled(false);
 
         paid[0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(paid[0].isChecked()){
+                if (paid[0].isChecked()) {
                     amounts[0].setEnabled(true);
-                }
-                else
+                } else
                     amounts[0].setEnabled(false);
             }
         });
@@ -57,10 +56,9 @@ public class friendslist extends AppCompatActivity {
         paid[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(paid[1].isChecked()){
+                if (paid[1].isChecked()) {
                     amounts[1].setEnabled(true);
-                }
-                else
+                } else
                     amounts[1].setEnabled(false);
             }
         });
@@ -68,10 +66,9 @@ public class friendslist extends AppCompatActivity {
         paid[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(paid[2].isChecked()){
+                if (paid[2].isChecked()) {
                     amounts[2].setEnabled(true);
-                }
-                else
+                } else
                     amounts[2].setEnabled(false);
             }
         });
@@ -79,10 +76,9 @@ public class friendslist extends AppCompatActivity {
         paid[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(paid[3].isChecked()){
+                if (paid[3].isChecked()) {
                     amounts[3].setEnabled(true);
-                }
-                else
+                } else
                     amounts[3].setEnabled(false);
             }
         });
@@ -90,10 +86,9 @@ public class friendslist extends AppCompatActivity {
         paid[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(paid[4].isChecked()){
+                if (paid[4].isChecked()) {
                     amounts[4].setEnabled(true);
-                }
-                else
+                } else
                     amounts[4].setEnabled(false);
             }
         });
@@ -101,10 +96,9 @@ public class friendslist extends AppCompatActivity {
         paid[5].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(paid[5].isChecked()){
+                if (paid[5].isChecked()) {
                     amounts[5].setEnabled(true);
-                }
-                else
+                } else
                     amounts[5].setEnabled(false);
             }
         });
@@ -112,10 +106,9 @@ public class friendslist extends AppCompatActivity {
         paid[6].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(paid[6].isChecked()){
+                if (paid[6].isChecked()) {
                     amounts[6].setEnabled(true);
-                }
-                else
+                } else
                     amounts[6].setEnabled(false);
             }
         });
@@ -123,10 +116,9 @@ public class friendslist extends AppCompatActivity {
         paid[7].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(paid[7].isChecked()){
+                if (paid[7].isChecked()) {
                     amounts[7].setEnabled(true);
-                }
-                else
+                } else
                     amounts[7].setEnabled(false);
             }
         });
@@ -134,10 +126,9 @@ public class friendslist extends AppCompatActivity {
         paid[8].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(paid[8].isChecked()){
+                if (paid[8].isChecked()) {
                     amounts[8].setEnabled(true);
-                }
-                else
+                } else
                     amounts[8].setEnabled(false);
             }
         });
@@ -145,10 +136,9 @@ public class friendslist extends AppCompatActivity {
         paid[9].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(paid[9].isChecked()){
+                if (paid[9].isChecked()) {
                     amounts[9].setEnabled(true);
-                }
-                else
+                } else
                     amounts[9].setEnabled(false);
             }
         });
@@ -158,164 +148,130 @@ public class friendslist extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                for(int i=0;i<num_of_enables;i++)
-                {
-                    if(amounts[i].getText().toString().length()!=0) {
+                for (int i = 0; i < num_of_enables; i++) {
+                    if (amounts[i].getText().toString().length() != 0) {
                         amo_str = amounts[i].getText().toString();
                         temp = Integer.parseInt(amo_str);
 
                         amo[i] = temp;
                         total_amount += amo[i];
                     }
-                    amo[i]=temp;
-                    total_amount+=amo[i];
+                    amo[i] = temp;
+                    total_amount += amo[i];
 
 
                 }
-                devided_amount=total_amount/num_of_enables;      // amount which  everyone has to pay
-                Toast.makeText(friendslist.this,"devided amount "+devided_amount,Toast.LENGTH_SHORT).show();
+                devided_amount = total_amount / num_of_enables;      // amount which  everyone has to pay
+                Toast.makeText(friendslist.this, "devided amount " + devided_amount, Toast.LENGTH_SHORT).show();
 
-                for(int i=0;i<num_of_enables;i++)
-                {
-                    paid_amount[i]=devided_amount;    // paid array stores amount which have to pay of frnd at index i
+                for (int i = 0; i < num_of_enables; i++) {
+                    paid_amount[i] = devided_amount;    // paid array stores amount which have to pay of frnd at index i
                 }
 
-                int[] levana=new int[10];     // ena index jene paisa levana 6
-                int[] devana=new int[10];    // ena  index jene paisa devana 6
-                int[] nutral = new int[10]  ; // vahivat  puro
+                int[] levana = new int[10];     // ena index jene paisa levana 6
+                int[] devana = new int[10];    // ena  index jene paisa devana 6
+                int[] nutral = new int[10]; // vahivat  puro
 
-                int q=0,q1=0,q2=0;
+                int q = 0, q1 = 0, q2 = 0;
 
-                for(int i=0;i<num_of_enables;i++)
-                {
+                for (int i = 0; i < num_of_enables; i++) {
 
 
-                    if(paid_amount[i]> amo[i])     // paid_amount e ketla paisa devana e nbatave 6  amo e ketla apela e  btave 6
+                    if (paid_amount[i] > amo[i])     // paid_amount e ketla paisa devana e nbatave 6  amo e ketla apela e  btave 6
                     {
-                        devana[q]=i;
-                        paid_amount[i]-=amo[i];
+                        devana[q] = i;
+                        paid_amount[i] -= amo[i];
                         q++;
-                    }
-                    else if(paid_amount[i]<amo[i])
-                    {
-                        levana[q1]=i;
-                        paid_amount[i]-=amo[i];
-                        paid_amount[i]=(-1)*paid_amount[i];
+                    } else if (paid_amount[i] < amo[i]) {
+                        levana[q1] = i;
+                        paid_amount[i] -= amo[i];
+                        paid_amount[i] = (-1) * paid_amount[i];
                         q1++;
-                    }
-                    else
-                    {
-                        nutral[q2]=i;
+                    } else {
+                        nutral[q2] = i;
                     }
                 }
 
 
-
-
-
-                for(int i=0;i<num_of_enables;i++){
-                    username[i]=names[i].getText().toString();
+                for (int i = 0; i < num_of_enables; i++) {
+                    username[i] = names[i].getText().toString();
                 }
 
-                if(!check_for_boxes()){
-                    Toast.makeText(getApplicationContext(),"At least one person should have paid the bill!",Toast.LENGTH_SHORT).show();
-                }
-                else if(!check_for_no_name()) {
+                if (!check_for_boxes()) {
+                    Toast.makeText(getApplicationContext(), "At least one person should have paid the bill!", Toast.LENGTH_SHORT).show();
+                } else if (!check_for_no_name()) {
                     Toast.makeText(getApplicationContext(), "Enter the name of all the users!", Toast.LENGTH_SHORT).show();
 
                 }
-                if(total_amount==0)
-                    Toast.makeText(friendslist.this,"The total cannot be zero!",Toast.LENGTH_SHORT).show();
+                if (total_amount == 0)
+                    Toast.makeText(friendslist.this, "The total cannot be zero!", Toast.LENGTH_SHORT).show();
 
                 else
-                            Toast.makeText(friendslist.this,"total amount "+total_amount,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(friendslist.this, "total amount " + total_amount, Toast.LENGTH_SHORT).show();
+
+
+                // jene levana 6 ene priority apishu
+                int x = 0;
+
+
+                while (paid_amount[levana[0]] != 0)
+
+                {
+                    if (paid_amount[levana[0]] < paid_amount[devana[x]]) {
+                        result[x] = " " + username[levana[0]] + "will collect Rs." + paid_amount[levana[0]] + "from " + paid_amount[devana[x]];
+                        paid_amount[devana[0]] -= paid_amount[levana[0]];
+                        paid_amount[levana[0]] = 0;
+                    } else if (paid_amount[levana[0]] > paid_amount[devana[x]]) {
+                        result[x] = " " + username[levana[0]] + "will collect Rs." + paid_amount[devana[x]] + "from " + paid_amount[devana[x]];
+                        paid_amount[levana[0]] -= paid_amount[devana[0]];
+                        paid_amount[devana[0]] = 0;
+
+
+                    } else {
+                        result[x] = " " + username[levana[0]] + "will collect Rs." + paid_amount[devana[x]] + "from " + paid_amount[devana[x]];
+                        paid_amount[levana[0]] = 0;
+                        paid_amount[devana[0]] = 0;
+                    }
+                    x++;
+                }
+
             }
         });
     }
 
-                // jene levana 6 ene priority apishu
-              int x=0;
-    public boolean check_for_no_name(){  // Checks if all the users have given their names or not!
-        boolean ans=true;
 
-        for(int i=0;i<num_of_enables;i++)
-            if(username[i].length()==0)
-            {
-                ans=false;
-                break;
-            }
-                  /*if (paid_amount[levana[0]]<=paid_amount[devana[0]])
-                  {
-                      result[0]=" "+username[levana[0]]+"will collect Rs."+paid_amount[levana[0]]+"from "+paid_amount[devana[0]];
-                      paid_amount[devana[0]]-=paid_amount[levana[0]];
-                      paid_amount[levana[0]]=0;
-                  }
-                  else
-                  {
-                      result[0]=" "+username[levana[0]]+"will collect Rs."+paid_amount[devana[0]]+"from "+paid_amount[devana[0]];
-                      paid_amount[levana[0]]-=paid_amount[devana[0]];
-                      paid_amount[devana[0]]=0;
+    public boolean check_for_boxes() {
+        // Checks if at least one box is checked!
+        boolean ans = false;
 
-        if(ans)
-            return true;
-        else
-            return false;
-    }
-                  }
-                  */
-
-
-    public boolean check_for_boxes(){  // Checks if at least one box is checked!
-        boolean ans=false;
-                  while(paid_amount[levana[0]]!=0)
-                  {
-                      if(paid_amount[levana[0]]<paid_amount[devana[x]])
-                      {
-                          result[x]=" "+username[levana[0]]+"will collect Rs."+paid_amount[levana[0]]+"from "+paid_amount[devana[x]];
-                          paid_amount[devana[0]]-=paid_amount[levana[0]];
-                          paid_amount[levana[0]]=0;
-                      }
-                      else if(paid_amount[levana[0]]>paid_amount[devana[x]])
-                      {
-                          result[x]=" "+username[levana[0]]+"will collect Rs."+paid_amount[devana[x]]+"from "+paid_amount[devana[x]];
-                          paid_amount[levana[0]]-=paid_amount[devana[0]];
-                          paid_amount[devana[0]]=0;
-
-        for(int i=0;i<num_of_enables;i++){
-            if(paid[i].isChecked())
-            {
-                ans=true;
+        for (int i = 0; i < num_of_enables; i++) {
+            if (paid[i].isChecked()) {
+                ans = true;
                 break;
             }
         }
-                      }
-                      else
-                      {
-                          result[x]=" "+username[levana[0]]+"will collect Rs."+paid_amount[devana[x]]+"from "+paid_amount[devana[x]];
-                          paid_amount[levana[0]]=0;
-                          paid_amount[devana[0]]=0;
-                      }
-                    x++;
-                  }
-
-
-
-
-
-
-
-            }
-        });
-
-
-
-        if(ans)
+        if (ans)
             return true;
         else
             return false;
     }
 
-    public void setID(){  // Sets the IDs
+
+    public boolean check_for_no_name() {  // Checks if all the users have given their names or not!
+        boolean ans = true;
+        for (int i = 0; i < num_of_enables; i++)
+            if (username[i].length() == 0) {
+                ans = false;
+                break;
+            }
+        if (ans)
+            return true;
+        else
+            return false;
+    }
+
+
+    public void setID() {  // Sets the IDs
         // Names of the friends
         names[0] = findViewById(R.id.name_1);
         names[1] = findViewById(R.id.name_2);
@@ -362,4 +318,5 @@ public class friendslist extends AppCompatActivity {
     //public boolean check_for_no_name(){
 
     //}
+
 }
