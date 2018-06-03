@@ -28,11 +28,18 @@ public class friendslist extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friendslist);
         setID();
+        for(int i=0;i<10;i++)
+        {
+            amo[i]=0;
+            paid_amount[i]=0;
+        }
+
+        num_of_enables = Integer.parseInt(getIntent().getStringExtra("number"));
 
         for (int i = 0; i < num_of_enables; i++)
             names[i].setText("");
 
-        num_of_enables = Integer.parseInt(getIntent().getStringExtra("number"));
+
 
         for (int i = num_of_enables; i < 10; i++) {
             names[i].setEnabled(false);
@@ -149,21 +156,21 @@ public class friendslist extends AppCompatActivity {
             public void onClick(View view) {
 
                 for (int i = 0; i < num_of_enables; i++) {
-
+                    if(paid[i].isChecked()) {
                         amo_str = amounts[i].getText().toString();
                         temp = Integer.parseInt(amo_str);
 
                         amo[i] = temp;
                         total_amount += amo[i];
-
+                    }
 
 
                 }
-              //  devided_amount = total_amount / num_of_enables;      // amount which  everyone has to pay
+               devided_amount = total_amount / num_of_enables;      // amount which  everyone has to pay
                 Toast.makeText(friendslist.this, "enable " + num_of_enables, Toast.LENGTH_SHORT).show();
   Toast.makeText(friendslist.this, "devided amount " + total_amount, Toast.LENGTH_SHORT).show();
 
-            /*    for (int i = 0; i < num_of_enables; i++) {
+                for (int i = 0; i < num_of_enables; i++) {
                     paid_amount[i] = devided_amount;    // paid array stores amount which have to pay of frnd at index i
                 }
 
@@ -222,21 +229,21 @@ public class friendslist extends AppCompatActivity {
 
                         if (paid_amount[levana[x1]] < paid_amount[devana[x]])
                         {
-                        result[x2] = " " + username[levana[x1]] + "will collect Rs." + paid_amount[levana[x1]] + "from " + paid_amount[devana[x]];
+                        result[x2] = " " + username[levana[x1]] + "will collect Rs." + paid_amount[levana[x1]] + "from " + username[devana[x]];
                         paid_amount[devana[x]] -= paid_amount[levana[x1]];
                         paid_amount[levana[x1]] = 0;
                         x2++;
                         }
                         else if (paid_amount[levana[x1]] > paid_amount[devana[x]])
                         {
-                        result[x] = " " + username[levana[x1]] + "will collect Rs." + paid_amount[devana[x]] + "from " + paid_amount[devana[x]];
+                        result[x] = " " + username[levana[x1]] + "will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
                         paid_amount[levana[x1]] -= paid_amount[devana[0]];
                         paid_amount[devana[x]] = 0;
                           x2++;     x++;
                         }
                         else
                         {
-                          result[x2] = " " + username[levana[x1]] + "will collect Rs." + paid_amount[devana[x]] + "from " + paid_amount[devana[x]];
+                          result[x2] = " " + username[levana[x1]] + "will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
                          paid_amount[levana[x1]] = 0;
                          paid_amount[devana[x]] = 0;
                          x2++;x++;
@@ -253,7 +260,7 @@ public class friendslist extends AppCompatActivity {
                    {
                         Toast.makeText(friendslist.this, result[i], Toast.LENGTH_SHORT).show();
                    }
-               */
+
             }
         });
     }
