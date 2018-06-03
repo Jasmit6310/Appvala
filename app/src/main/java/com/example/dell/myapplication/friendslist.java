@@ -197,7 +197,7 @@ public class friendslist extends AppCompatActivity {
                         nutral[q2] = i;
                     }
                 }
-
+                //E raja raja raja kaleja me samaja
 
                 for (int i = 0; i < num_of_enables; i++) {
                     username[i] = names[i].getText().toString();
@@ -229,21 +229,21 @@ public class friendslist extends AppCompatActivity {
 
                         if (paid_amount[levana[x1]] < paid_amount[devana[x]])
                         {
-                        result[x2] = " " + username[levana[x1]] + "will collect Rs." + paid_amount[levana[x1]] + "from " + username[devana[x]];
+                        result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[levana[x1]] + "from " + username[devana[x]];
                         paid_amount[devana[x]] -= paid_amount[levana[x1]];
                         paid_amount[levana[x1]] = 0;
                         x2++;
                         }
                         else if (paid_amount[levana[x1]] > paid_amount[devana[x]])
                         {
-                        result[x] = " " + username[levana[x1]] + "will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
+                        result[x] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
                         paid_amount[levana[x1]] -= paid_amount[devana[0]];
                         paid_amount[devana[x]] = 0;
                           x2++;     x++;
                         }
                         else
                         {
-                          result[x2] = " " + username[levana[x1]] + "will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
+                          result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
                          paid_amount[levana[x1]] = 0;
                          paid_amount[devana[x]] = 0;
                          x2++;x++;
