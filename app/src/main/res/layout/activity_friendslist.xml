@@ -76,7 +76,8 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_disabled"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:text="0" />
 
         </LinearLayout>
 
@@ -100,13 +101,14 @@
                 android:id="@+id/checkbox_2"/>
 
             <EditText
+                android:id="@+id/amount_2"
                 android:layout_width="100dp"
                 android:layout_height="44dp"
-                android:background="@drawable/button_disabled"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_disabled"
                 android:inputType="numberDecimal"
-                android:id="@+id/amount_2"/>
+                android:text="0" />
 
         </LinearLayout>
 
@@ -130,13 +132,14 @@
                 android:id="@+id/checkbox_3"/>
 
             <EditText
+                android:id="@+id/amount_3"
                 android:layout_width="100dp"
                 android:layout_height="44dp"
-                android:background="@drawable/button_disabled"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_disabled"
                 android:inputType="numberDecimal"
-                android:id="@+id/amount_3"/>
+                android:text="0" />
 
         </LinearLayout>
 
@@ -160,13 +163,14 @@
                 android:id="@+id/checkbox_4"/>
 
             <EditText
+                android:id="@+id/amount_4"
                 android:layout_width="100dp"
                 android:layout_height="44dp"
-                android:background="@drawable/button_disabled"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_disabled"
                 android:inputType="numberDecimal"
-                android:id="@+id/amount_4"/>
+                android:text="0" />
 
         </LinearLayout>
 
@@ -190,13 +194,14 @@
                 android:id="@+id/checkbox_5"/>
 
             <EditText
+                android:id="@+id/amount_5"
                 android:layout_width="100dp"
                 android:layout_height="44dp"
-                android:background="@drawable/button_disabled"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_disabled"
                 android:inputType="numberDecimal"
-                android:id="@+id/amount_5"/>
+                android:text="0" />
 
         </LinearLayout>
 
@@ -220,13 +225,14 @@
                 android:id="@+id/checkbox_6"/>
 
             <EditText
+                android:id="@+id/amount_6"
                 android:layout_width="100dp"
                 android:layout_height="44dp"
-                android:background="@drawable/button_disabled"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_disabled"
                 android:inputType="numberDecimal"
-                android:id="@+id/amount_6"/>
+                android:text="0" />
 
         </LinearLayout>
 
@@ -250,13 +256,14 @@
                 android:id="@+id/checkbox_7"/>
 
             <EditText
+                android:id="@+id/amount_7"
                 android:layout_width="100dp"
                 android:layout_height="44dp"
-                android:background="@drawable/button_disabled"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_disabled"
                 android:inputType="numberDecimal"
-                android:id="@+id/amount_7"/>
+                android:text="0" />
 
         </LinearLayout>
 
@@ -280,13 +287,14 @@
                 android:id="@+id/checkbox_8"/>
 
             <EditText
+                android:id="@+id/amount_8"
                 android:layout_width="100dp"
                 android:layout_height="44dp"
-                android:background="@drawable/button_disabled"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_disabled"
                 android:inputType="numberDecimal"
-                android:id="@+id/amount_8"/>
+                android:text="0" />
 
         </LinearLayout>
 
@@ -310,13 +318,14 @@
                 android:id="@+id/checkbox_9"/>
 
             <EditText
+                android:id="@+id/amount_9"
                 android:layout_width="100dp"
                 android:layout_height="44dp"
-                android:background="@drawable/button_disabled"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_disabled"
                 android:inputType="numberDecimal"
-                android:id="@+id/amount_9"/>
+                android:text="0" />
 
         </LinearLayout>
 
@@ -340,13 +349,14 @@
                 android:id="@+id/checkbox_10"/>
 
             <EditText
+                android:id="@+id/amount_10"
                 android:layout_width="100dp"
                 android:layout_height="44dp"
-                android:background="@drawable/button_disabled"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_disabled"
                 android:inputType="numberDecimal"
-                android:id="@+id/amount_10"/>
+                android:text="0" />
 
         </LinearLayout>
 

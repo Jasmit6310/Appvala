@@ -188,9 +188,9 @@ public class friendslist extends AppCompatActivity {
 
                 }
 
-                if (!check_for_null_amount(paid_amount, total_checked,paid)) {
+                /*if (!check_for_null_amount(paid_amount, total_checked,paid)) {
                     Toast.makeText(getApplicationContext(), "The amount field cannot be left blanck once it is selected!", Toast.LENGTH_LONG).show();
-                } else {
+                } else {*/
                     devided_amount = total_amount / num_of_enables;      // amount which  everyone has to pay
                     Toast.makeText(friendslist.this, "enable " + num_of_enables, Toast.LENGTH_SHORT).show();
                     Toast.makeText(friendslist.this, "devided amount " + total_amount, Toast.LENGTH_SHORT).show();
@@ -281,7 +281,7 @@ public class friendslist extends AppCompatActivity {
                     }
 
                 }
-            }
+            
         });
     }
 
