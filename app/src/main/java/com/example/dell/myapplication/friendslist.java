@@ -149,22 +149,21 @@ public class friendslist extends AppCompatActivity {
             public void onClick(View view) {
 
                 for (int i = 0; i < num_of_enables; i++) {
-                    if (amounts[i].getText().toString().length() != 0) {
+
                         amo_str = amounts[i].getText().toString();
                         temp = Integer.parseInt(amo_str);
 
                         amo[i] = temp;
                         total_amount += amo[i];
-                    }
-                    amo[i] = temp;
-                    total_amount += amo[i];
+
 
 
                 }
-                devided_amount = total_amount / num_of_enables;      // amount which  everyone has to pay
-                Toast.makeText(friendslist.this, "devided amount " + devided_amount, Toast.LENGTH_SHORT).show();
+              //  devided_amount = total_amount / num_of_enables;      // amount which  everyone has to pay
+                Toast.makeText(friendslist.this, "enable " + num_of_enables, Toast.LENGTH_SHORT).show();
+  Toast.makeText(friendslist.this, "devided amount " + total_amount, Toast.LENGTH_SHORT).show();
 
-                for (int i = 0; i < num_of_enables; i++) {
+            /*    for (int i = 0; i < num_of_enables; i++) {
                     paid_amount[i] = devided_amount;    // paid array stores amount which have to pay of frnd at index i
                 }
 
@@ -206,35 +205,55 @@ public class friendslist extends AppCompatActivity {
                 if (total_amount == 0)
                     Toast.makeText(friendslist.this, "The total cannot be zero!", Toast.LENGTH_SHORT).show();
 
-                else
-                    Toast.makeText(friendslist.this, "total amount " + total_amount, Toast.LENGTH_SHORT).show();
+                else{}
+                  //  Toast.makeText(friendslist.this, "total amount " + total_amount, Toast.LENGTH_SHORT).show();
 
 
                 // jene levana 6 ene priority apishu
-                int x = 0;
+                int x = 0,x1=0,x2=0;
 
 
-                while (paid_amount[levana[0]] != 0)
+              for(int i=0;i<q1;i++)
+               {
+                   if(x1<=q1)
+                 {
+                    while (paid_amount[levana[x1]] != 0 && x<=q)
+                   {
 
-                {
-                    if (paid_amount[levana[0]] < paid_amount[devana[x]]) {
-                        result[x] = " " + username[levana[0]] + "will collect Rs." + paid_amount[levana[0]] + "from " + paid_amount[devana[x]];
-                        paid_amount[devana[0]] -= paid_amount[levana[0]];
-                        paid_amount[levana[0]] = 0;
-                    } else if (paid_amount[levana[0]] > paid_amount[devana[x]]) {
-                        result[x] = " " + username[levana[0]] + "will collect Rs." + paid_amount[devana[x]] + "from " + paid_amount[devana[x]];
-                        paid_amount[levana[0]] -= paid_amount[devana[0]];
-                        paid_amount[devana[0]] = 0;
+                        if (paid_amount[levana[x1]] < paid_amount[devana[x]])
+                        {
+                        result[x2] = " " + username[levana[x1]] + "will collect Rs." + paid_amount[levana[x1]] + "from " + paid_amount[devana[x]];
+                        paid_amount[devana[x]] -= paid_amount[levana[x1]];
+                        paid_amount[levana[x1]] = 0;
+                        x2++;
+                        }
+                        else if (paid_amount[levana[x1]] > paid_amount[devana[x]])
+                        {
+                        result[x] = " " + username[levana[x1]] + "will collect Rs." + paid_amount[devana[x]] + "from " + paid_amount[devana[x]];
+                        paid_amount[levana[x1]] -= paid_amount[devana[0]];
+                        paid_amount[devana[x]] = 0;
+                          x2++;     x++;
+                        }
+                        else
+                        {
+                          result[x2] = " " + username[levana[x1]] + "will collect Rs." + paid_amount[devana[x]] + "from " + paid_amount[devana[x]];
+                         paid_amount[levana[x1]] = 0;
+                         paid_amount[devana[x]] = 0;
+                         x2++;x++;
+                        }
+                   }
+
+                 }
+                x1++;
+
+               }
 
 
-                    } else {
-                        result[x] = " " + username[levana[0]] + "will collect Rs." + paid_amount[devana[x]] + "from " + paid_amount[devana[x]];
-                        paid_amount[levana[0]] = 0;
-                        paid_amount[devana[0]] = 0;
-                    }
-                    x++;
-                }
-
+               for(int i=0;i<x2;i++)
+                   {
+                        Toast.makeText(friendslist.this, result[i], Toast.LENGTH_SHORT).show();
+                   }
+               */
             }
         });
     }
