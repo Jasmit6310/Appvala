@@ -175,7 +175,7 @@ public class friendslist extends AppCompatActivity {
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                total_amount=0;
                 for (int i = 0; i < num_of_enables; i++) {
                     if (paid[i].isChecked()) {
                         amo_str = amounts[i].getText().toString();
