@@ -251,34 +251,39 @@ public class friendslist extends AppCompatActivity {
                     // jene levana 6 ene priority apishu
                     int x = 0, x1 = 0, x2 = 0;
 
+                    if(q2!=num_of_enables) {
+                        for (int i = 0; i < q1; i++) {
+                            if (x1 <= q1) {
+                                while (paid_amount[levana[x1]] != 0 && x <= q) {
 
-                    for (int i = 0; i < q1; i++) {
-                        if (x1 <= q1) {
-                            while (paid_amount[levana[x1]] != 0 && x <= q) {
-
-                                if (paid_amount[levana[x1]] < paid_amount[devana[x]]) {
-                                    result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[levana[x1]] + "from " + username[devana[x]];
-                                    paid_amount[devana[x]] -= paid_amount[levana[x1]];
-                                    paid_amount[levana[x1]] = 0;
-                                    x2++;
-                                } else if (paid_amount[levana[x1]] > paid_amount[devana[x]]) {
-                                    result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
-                                    paid_amount[levana[x1]] -= paid_amount[devana[0]];
-                                    paid_amount[devana[x]] = 0;
-                                    x2++;
-                                    x++;
-                                } else {
-                                    result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
-                                    paid_amount[levana[x1]] = 0;
-                                    paid_amount[devana[x]] = 0;
-                                    x2++;
-                                    x++;
+                                    if (paid_amount[levana[x1]] < paid_amount[devana[x]]) {
+                                        result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[levana[x1]] + "from " + username[devana[x]];
+                                        paid_amount[devana[x]] -= paid_amount[levana[x1]];
+                                        paid_amount[levana[x1]] = 0;
+                                        x2++;
+                                    } else if (paid_amount[levana[x1]] > paid_amount[devana[x]]) {
+                                        result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
+                                        paid_amount[levana[x1]] -= paid_amount[devana[0]];
+                                        paid_amount[devana[x]] = 0;
+                                        x2++;
+                                        x++;
+                                    } else {
+                                        result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
+                                        paid_amount[levana[x1]] = 0;
+                                        paid_amount[devana[x]] = 0;
+                                        x2++;
+                                        x++;
+                                    }
                                 }
+
                             }
+                            x1++;
 
                         }
-                        x1++;
-
+                    }
+                    else{
+                        result[x2]="Everyone has paid their respective amounts";
+                        x2++;
                     }
 
 
