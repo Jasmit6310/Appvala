@@ -180,7 +180,7 @@ public class friendslist extends AppCompatActivity {
                     if (paid[i].isChecked()) {
                         amo_str = amounts[i].getText().toString();
                         if(amo_str.matches((""))) {
-                            Toast.makeText(friendslist.this, "devided amount " + total_amount, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(friendslist.this, "Please enter the amount in all the boxes in which you have checked ", Toast.LENGTH_SHORT).show();
                         }
                         else {
                             temp = Integer.parseInt(amo_str);
@@ -225,6 +225,7 @@ public class friendslist extends AppCompatActivity {
                             q1++;
                         } else {
                             nutral[q2] = i;
+                            q2++;
                         }
                     }
                     //E raja raja raja kaleja me samaja
@@ -261,7 +262,7 @@ public class friendslist extends AppCompatActivity {
                                     paid_amount[levana[x1]] = 0;
                                     x2++;
                                 } else if (paid_amount[levana[x1]] > paid_amount[devana[x]]) {
-                                    result[x] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
+                                    result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
                                     paid_amount[levana[x1]] -= paid_amount[devana[0]];
                                     paid_amount[devana[x]] = 0;
                                     x2++;
@@ -290,7 +291,7 @@ public class friendslist extends AppCompatActivity {
         });
     }
 
-    public boolean check_for_null_amount(int enables, CheckBox ispaid[]){
+   /* public boolean check_for_null_amount(int enables, CheckBox ispaid[]){
         int i;
         boolean ans=true;
         for(i=0;i<enables;i++)
@@ -301,7 +302,7 @@ public class friendslist extends AppCompatActivity {
                 }
         }
         return ans;
-    }
+    }*/
 
     public boolean check_for_boxes() {
         // Checks if at least one box is checked!
