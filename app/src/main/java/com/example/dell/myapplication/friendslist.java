@@ -179,10 +179,15 @@ public class friendslist extends AppCompatActivity {
                 for (int i = 0; i < num_of_enables; i++) {
                     if (paid[i].isChecked()) {
                         amo_str = amounts[i].getText().toString();
-                        temp = Integer.parseInt(amo_str);
+                        if(amo_str.matches((""))) {
+                            Toast.makeText(friendslist.this, "devided amount " + total_amount, Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            temp = Integer.parseInt(amo_str);
 
-                        amo[i] = temp;
-                        total_amount += amo[i];
+                            amo[i] = temp;
+                            total_amount += amo[i];
+                        }
                     }
 
 
@@ -281,21 +286,19 @@ public class friendslist extends AppCompatActivity {
                     }
 
                 }
-            
+
         });
     }
 
-    public boolean check_for_null_amount(int paid[], int enables, CheckBox ispaid[]){
+    public boolean check_for_null_amount(int enables, CheckBox ispaid[]){
         int i;
         boolean ans=true;
         for(i=0;i<enables;i++)
         {
-            if(paid[i]==0) {
                 if(ispaid[i].isChecked()) {
                     ans = false;
                     break;
                 }
-            }
         }
         return ans;
     }
