@@ -184,7 +184,6 @@ public class friendslist extends AppCompatActivity {
                         }
                         else {
                             temp = Integer.parseInt(amo_str);
-
                             amo[i] = temp;
                             total_amount += amo[i];
                         }
@@ -225,6 +224,7 @@ public class friendslist extends AppCompatActivity {
                             q1++;
                         } else {
                             nutral[q2] = i;
+                            paid_amount[i]=0;
                             q2++;
                         }
                     }
@@ -254,7 +254,7 @@ public class friendslist extends AppCompatActivity {
                     if(q2!=num_of_enables) {
                         for (int i = 0; i < q1; i++) {
                             if (x1 <= q1) {
-                                while (paid_amount[levana[x1]] != 0 && x <= q) {
+                                while (paid_amount[levana[x1]] != 0 && x < q) {
 
                                     if (paid_amount[levana[x1]] < paid_amount[devana[x]]) {
                                         result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[levana[x1]] + "from " + username[devana[x]];
