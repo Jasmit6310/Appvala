@@ -34,23 +34,21 @@
 
             <Button
                 android:id="@+id/btn_1_1"
-                style="@android:style/Widget.Button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#dfe4ea"
                 android:text="2"
-                android:textSize="50dp" />
+                android:textSize="50dp"/>
 
             <Button
                 android:id="@+id/btn_1_2"
-                style="@android:style/Widget.Button.Small"
                 android:layout_width="0dp"
-               android:layout_height="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#dfe4ea"
                 android:text="3"
-                android:textSize="50dp" />
+                android:textSize="50dp"/>
 
             <Button
                 android:id="@+id/btn_1_3"

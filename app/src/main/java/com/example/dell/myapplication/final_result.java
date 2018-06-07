@@ -1,8 +1,12 @@
 package com.example.dell.myapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +19,44 @@ public class final_result extends AppCompatActivity {
     private String answer;
     private int [] tv_ids = new int[22];
     private int number;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.result_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.btn_go_to_list: {
+                AlertDialog.Builder builder = new AlertDialog.Builder(final_result.this);
+                builder.setCancelable(true);
+                builder.setMessage("Are you sure you want to generate a new query?");
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(final_result.this,first_page.class));
+                        finish();
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        }
+
+
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +103,29 @@ public class final_result extends AppCompatActivity {
 //        }
 
 
+    }
+
+    public void onBackPressed(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(final_result.this);
+        builder.setCancelable(true);
+        builder.setMessage("Are you sure you want to generate a new query?");
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(final_result.this,first_page.class));
+                finish();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
     private void setID(){

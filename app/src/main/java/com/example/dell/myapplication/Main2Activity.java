@@ -1,6 +1,8 @@
 package com.example.dell.myapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.Explode;
@@ -45,5 +47,27 @@ public class Main2Activity extends AppCompatActivity {
         R3C2 = (Button) findViewById(R.id.btn_3_2);
         R3C3 = (Button) findViewById(R.id.btn_3_3);
 
+    }
+
+    public void onBackPressed(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(Main2Activity.this);
+        builder.setCancelable(true);
+        builder.setMessage("Are you sure you want to quit?");
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }

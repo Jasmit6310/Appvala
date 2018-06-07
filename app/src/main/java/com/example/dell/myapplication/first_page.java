@@ -1,6 +1,8 @@
 package com.example.dell.myapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +30,7 @@ public class first_page extends AppCompatActivity {
                 Toast.makeText(first_page.this, "Split between 2", Toast.LENGTH_SHORT).show();
                 startActivity(k);
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                finish();
             }
         });
         R3.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +41,7 @@ public class first_page extends AppCompatActivity {
                 k.putExtra("number",s);
                 Toast.makeText(first_page.this, "Split between 3", Toast.LENGTH_SHORT).show();
                 startActivity(k);
+                finish();
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
@@ -50,6 +54,7 @@ public class first_page extends AppCompatActivity {
                 k.putExtra("number",s);
                 Toast.makeText(first_page.this, "Split between 4", Toast.LENGTH_SHORT).show();
                 startActivity(k);
+                finish();
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
@@ -62,6 +67,7 @@ public class first_page extends AppCompatActivity {
                 k.putExtra("number",s);
                 Toast.makeText(getApplicationContext(),"Split between 5",Toast.LENGTH_SHORT).show();
                 startActivity(k);
+                finish();
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
@@ -74,6 +80,7 @@ public class first_page extends AppCompatActivity {
                 k.putExtra("number",s);
                 Toast.makeText(getApplicationContext(),"Split between 6",Toast.LENGTH_SHORT).show();
                 startActivity(k);
+                finish();
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
@@ -86,6 +93,7 @@ public class first_page extends AppCompatActivity {
                 k.putExtra("number",s);
                 Toast.makeText(getApplicationContext(),"Split between 7",Toast.LENGTH_SHORT).show();
                 startActivity(k);
+                finish();
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
@@ -98,6 +106,7 @@ public class first_page extends AppCompatActivity {
                 k.putExtra("number",s);
                 Toast.makeText(getApplicationContext(),"Split between 8",Toast.LENGTH_SHORT).show();
                 startActivity(k);
+                finish();
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
@@ -110,6 +119,7 @@ public class first_page extends AppCompatActivity {
                 k.putExtra("number",s);
                 Toast.makeText(getApplicationContext(),"Split between 9",Toast.LENGTH_SHORT).show();
                 startActivity(k);
+                finish();
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
@@ -122,12 +132,35 @@ public class first_page extends AppCompatActivity {
                 k.putExtra("number",s);
                 Toast.makeText(getApplicationContext(),"Split between 10",Toast.LENGTH_SHORT).show();
                 startActivity(k);
+                finish();
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
 
     }
 
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(first_page.this);
+        builder.setCancelable(true);
+        builder.setMessage("Are you sure you want to quit?");
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 
     public void setID(){
 

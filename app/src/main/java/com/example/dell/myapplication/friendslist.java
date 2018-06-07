@@ -1,11 +1,13 @@
 package com.example.dell.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -169,6 +171,8 @@ public class friendslist extends AppCompatActivity {
                             neo.putExtra("result_ans", result);
                             neo.putExtra("limit", var_limit);
                             startActivity(neo);
+                            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                            finish();
                         }else{
                             ;
                         }
@@ -462,6 +466,17 @@ public class friendslist extends AppCompatActivity {
 //
 //        });
 
+        for(int i=0;i<10;i++){
+            amounts[i].setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View view, boolean b) {
+                    if(!b){
+                        hideKeyboard(view);
+                    }
+                }
+            });
+        }
+
 
     }
 
@@ -554,9 +569,20 @@ public class friendslist extends AppCompatActivity {
         //go = findViewById(R.id.btn_go);
     }
 
+    public void hideKeyboard(View view){
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(),0);
+    }
+
     // Checks if the user has entered the name or not!
     //public boolean check_for_no_name(){
 
     //}
+
+    public void onBackPressed(){
+        startActivity(new Intent(getApplicationContext(),first_page.class));
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+        finish();
+    }
 
 }

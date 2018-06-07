@@ -7,19 +7,18 @@
     >
 
 
-    <EditText
+    <TextView
         android:id="@+id/editText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="210dp"
-        android:ems="10"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:ems="13"
         android:fontFamily="serif"
         android:inputType="textPersonName"
-        android:text="Bill Spliter and Tax Counter"
+        android:text="Bill Splliter"
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:typeface="monospace" />
+        android:typeface="monospace"
+        />
 </LinearLayout>
