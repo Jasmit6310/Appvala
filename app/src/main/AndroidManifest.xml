@@ -13,18 +13,19 @@
         android:label="Bill Spliting"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        >
+        <activity android:name=".MainActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".after2" />
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".friendslist" />
-        <activity android:name=".first_page"></activity>
+        <activity android:name=".after2" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".Main2Activity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".friendslist" android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        <activity android:name=".first_page" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".final_result" android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
     </application>
 
 </manifest>
