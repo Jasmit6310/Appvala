@@ -203,25 +203,45 @@ public class friendslist extends AppCompatActivity {
                     int[] devana = new int[10];    // ena  index jene paisa devana 6
                     int[] nutral = new int[10]; // vahivat  puro
 
-                    int q = 0, q1 = 0, q2 = 0;
+                    int q = 0, q1 = 0, q2 = 0,last_update=0;
 
                     for (int i = 0; i < num_of_enables; i++) {
-
 
                         if (paid_amount[i] > amo[i])     // paid_amount e ketla paisa devana e nbatave 6  amo e ketla apela e  btave 6
                         {
                             devana[q] = i;
                             paid_amount[i] -= amo[i];
                             q++;
+                            last_update=1;
                         } else if (paid_amount[i] < amo[i]) {
+
                             levana[q1] = i;
                             paid_amount[i] -= amo[i];
                             paid_amount[i] = (-1) * paid_amount[i];
                             q1++;
+                            last_update=2;
                         } else {
+
                             nutral[q2] = i;
+                            q2++;
+                            last_update=3;
                         }
                     }
+
+                    if( last_update==1)
+                    {
+                        q--;
+                    }
+                    else if( last_update==2)
+                    {
+                        q1--;
+                    }
+
+                    else if( last_update==3)
+                    {
+                        q2--;
+                    }
+
                     //E raja raja raja kaleja me samaja
 
                     for (int i = 0; i < num_of_enables; i++) {
@@ -247,36 +267,45 @@ public class friendslist extends AppCompatActivity {
 
 
                     for (int i = 0; i < q1; i++) {
-                        if (x1 <= q1) {
-                            while (paid_amount[levana[x1]] != 0 && x <= q) {
 
-                                if (paid_amount[levana[x1]] < paid_amount[devana[x]]) {
-                                    result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[levana[x1]] + "from " + username[devana[x]];
+                        while (paid_amount[levana[x1]] != 0 && x <= q) {
+
+                               if (paid_amount[levana[x1]] < paid_amount[devana[x]])
+                               {
+
+                                   result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[levana[x1]] + "from " + username[devana[x]];
                                     paid_amount[devana[x]] -= paid_amount[levana[x1]];
                                     paid_amount[levana[x1]] = 0;
-                                    x2++;
-                                } else if (paid_amount[levana[x1]] > paid_amount[devana[x]]) {
-                                    result[x] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
+                                   x2++;
+                               }
+                               else if (paid_amount[levana[x1]] > paid_amount[devana[x]])
+                                {
+                                   result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
                                     paid_amount[levana[x1]] -= paid_amount[devana[0]];
                                     paid_amount[devana[x]] = 0;
+
                                     x2++;
                                     x++;
-                                } else {
+                                }
+
+                                else
+                                {
                                     result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
                                     paid_amount[levana[x1]] = 0;
                                     paid_amount[devana[x]] = 0;
                                     x2++;
                                     x++;
-                                }
-                            }
 
-                        }
+                                }
+
+
+                            }
                         x1++;
 
                     }
 
 
-                    for (int i = 0; i < x2; i++) {
+                for (int i = 0; i < x2; i++) {
                         Toast.makeText(friendslist.this, result[i], Toast.LENGTH_SHORT).show();
                     }
 
