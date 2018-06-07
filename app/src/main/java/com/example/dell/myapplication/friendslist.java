@@ -191,125 +191,132 @@ public class friendslist extends AppCompatActivity {
                 /*if (!check_for_null_amount(paid_amount, total_checked,paid)) {
                     Toast.makeText(getApplicationContext(), "The amount field cannot be left blanck once it is selected!", Toast.LENGTH_LONG).show();
                 } else {*/
-                    devided_amount = total_amount / num_of_enables;      // amount which  everyone has to pay
-                    Toast.makeText(friendslist.this, "enable " + num_of_enables, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(friendslist.this, "devided amount " + total_amount, Toast.LENGTH_SHORT).show();
+                devided_amount = total_amount / num_of_enables;      // amount which  everyone has to pay
+                Toast.makeText(friendslist.this, "enable " + num_of_enables, Toast.LENGTH_SHORT).show();
+                Toast.makeText(friendslist.this, "devided amount " + total_amount, Toast.LENGTH_SHORT).show();
 
-                    for (int i = 0; i < num_of_enables; i++) {
-                        paid_amount[i] = devided_amount;    // paid array stores amount which have to pay of frnd at index i
-                    }
+                for (int i = 0; i < num_of_enables; i++) {
+                    paid_amount[i] = devided_amount;    // paid array stores amount which have to pay of frnd at index i
+                }
 
-                    int[] levana = new int[10];     // ena index jene paisa levana 6
-                    int[] devana = new int[10];    // ena  index jene paisa devana 6
-                    int[] nutral = new int[10]; // vahivat  puro
+                int[] levana = new int[10];     // ena index jene paisa levana 6
+                int[] devana = new int[10];    // ena  index jene paisa devana 6
+                int[] nutral = new int[10]; // vahivat  puro
 
-                    int q = 0, q1 = 0, q2 = 0,last_update=0;
+                int q = 0, q1 = 0, q2 = 0,last_update=0;
 
-                    for (int i = 0; i < num_of_enables; i++) {
+                for (int i = 0; i < num_of_enables; i++) {
 
-                        if (paid_amount[i] > amo[i])     // paid_amount e ketla paisa devana e nbatave 6  amo e ketla apela e  btave 6
-                        {
-                            devana[q] = i;
-                            paid_amount[i] -= amo[i];
-                            q++;
-                            last_update=1;
-                        } else if (paid_amount[i] < amo[i]) {
-
-                            levana[q1] = i;
-                            paid_amount[i] -= amo[i];
-                            paid_amount[i] = (-1) * paid_amount[i];
-                            q1++;
-                            last_update=2;
-                        } else {
-
-                            nutral[q2] = i;
-                            q2++;
-                            last_update=3;
-                        }
-                    }
-
-                    if( last_update==1)
+                    if (paid_amount[i] > amo[i])     // paid_amount e ketla paisa devana e nbatave 6  amo e ketla apela e  btave 6
                     {
-                        q--;
+                        devana[q] = i;
+                        paid_amount[i] -= amo[i];
+                        q++;
+                        last_update=1;
+                    } else if (paid_amount[i] < amo[i]) {
+
+                        levana[q1] = i;
+                        paid_amount[i] -= amo[i];
+                        paid_amount[i] = (-1) * paid_amount[i];
+                        q1++;
+                        last_update=2;
+                    } else {
+
+                        nutral[q2] = i;
+                        q2++;
+                        last_update=3;
                     }
-                    else if( last_update==2)
-                    {
-                        q1--;
-                    }
+                }
 
-                    else if( last_update==3)
-                    {
-                        q2--;
-                    }
+              /*  if( last_update==1)
+                {
+                    q--;
+                }
+                else if( last_update==2)
+                {
+                    q1--;
+                }
 
-                    //E raja raja raja kaleja me samaja
+                else if( last_update==3)
+                {
+                    q2--;
+                }
+*/
+                for (int i = 0; i < q1; i++) {
+                    Toast.makeText(friendslist.this, "levana  "+username[levana[i]], Toast.LENGTH_SHORT).show();
+                }
+                for (int i = 0; i < q; i++) {
+                    Toast.makeText(friendslist.this, "devana  "+username[devana[i]], Toast.LENGTH_SHORT).show();
+                }
 
-                    for (int i = 0; i < num_of_enables; i++) {
-                        username[i] = names[i].getText().toString();
-                    }
+                //E raja raja raja kaleja me samaja
 
-                    if (!check_for_boxes()) {
-                        Toast.makeText(getApplicationContext(), "At least one person should have paid the bill!", Toast.LENGTH_SHORT).show();
-                    } else if (!check_for_no_name()) {
-                        Toast.makeText(getApplicationContext(), "Enter the name of all the users!", Toast.LENGTH_SHORT).show();
+                for (int i = 0; i < num_of_enables; i++) {
+                    username[i] = names[i].getText().toString();
+                }
 
-                    }
-                    if (total_amount == 0)
-                        Toast.makeText(friendslist.this, "The total cannot be zero!", Toast.LENGTH_SHORT).show();
-
-                    else {
-                    }
-                    //  Toast.makeText(friendslist.this, "total amount " + total_amount, Toast.LENGTH_SHORT).show();
-
-
-                    // jene levana 6 ene priority apishu
-                    int x = 0, x1 = 0, x2 = 0;
-
-
-                    for (int i = 0; i < q1; i++) {
-
-                        while (paid_amount[levana[x1]] != 0 && x <= q) {
-
-                               if (paid_amount[levana[x1]] < paid_amount[devana[x]])
-                               {
-
-                                   result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[levana[x1]] + "from " + username[devana[x]];
-                                    paid_amount[devana[x]] -= paid_amount[levana[x1]];
-                                    paid_amount[levana[x1]] = 0;
-                                   x2++;
-                               }
-                               else if (paid_amount[levana[x1]] > paid_amount[devana[x]])
-                                {
-                                   result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
-                                    paid_amount[levana[x1]] -= paid_amount[devana[0]];
-                                    paid_amount[devana[x]] = 0;
-
-                                    x2++;
-                                    x++;
-                                }
-
-                                else
-                                {
-                                    result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
-                                    paid_amount[levana[x1]] = 0;
-                                    paid_amount[devana[x]] = 0;
-                                    x2++;
-                                    x++;
-
-                                }
-
-
-                            }
-                        x1++;
-
-                    }
-
-                for (int i = 0; i < x2; i++) {
-                        Toast.makeText(friendslist.this, result[i], Toast.LENGTH_SHORT).show();
-                    }
+                if (!check_for_boxes()) {
+                    Toast.makeText(getApplicationContext(), "At least one person should have paid the bill!", Toast.LENGTH_SHORT).show();
+                } else if (!check_for_no_name()) {
+                    Toast.makeText(getApplicationContext(), "Enter the name of all the users!", Toast.LENGTH_SHORT).show();
 
                 }
-            
+                if (total_amount == 0)
+                    Toast.makeText(friendslist.this, "The total cannot be zero!", Toast.LENGTH_SHORT).show();
+
+                else {
+                }
+                //  Toast.makeText(friendslist.this, "total amount " + total_amount, Toast.LENGTH_SHORT).show();
+
+
+                // jene levana 6 ene priority apishu
+                int x = 0, x1 = 0, x2 = 0;
+
+
+                for (int i = 0; i < q1; i++) {
+
+                    while (paid_amount[levana[x1]] != 0 && x < q) {
+
+                        if (paid_amount[levana[x1]] < paid_amount[devana[x]])
+                        {
+
+                            result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[levana[x1]] + "from " + username[devana[x]];
+                            paid_amount[devana[x]] -= paid_amount[levana[x1]];
+                            paid_amount[levana[x1]] = 0;
+                            x2++;
+                        }
+                        else if (paid_amount[levana[x1]] > paid_amount[devana[x]])
+                        {
+                            result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
+                            paid_amount[levana[x1]] -= paid_amount[devana[0]];
+                            paid_amount[devana[x]] = 0;
+
+                            x2++;
+                            x++;
+                        }
+
+                        else
+                        {
+                            result[x2] = " " + username[levana[x1]] + " will collect Rs." + paid_amount[devana[x]] + "from " + username[devana[x]];
+                            paid_amount[levana[x1]] = 0;
+                            paid_amount[devana[x]] = 0;
+                            x2++;
+                            x++;
+
+                        }
+
+
+                    }
+                    x1++;
+
+                }
+
+                for (int i = 0; i < x2; i++) {
+                    Toast.makeText(friendslist.this, result[i], Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
         });
     }
 
