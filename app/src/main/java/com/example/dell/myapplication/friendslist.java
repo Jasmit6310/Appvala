@@ -304,7 +304,6 @@ public class friendslist extends AppCompatActivity {
 
                     }
 
-
                 for (int i = 0; i < x2; i++) {
                         Toast.makeText(friendslist.this, result[i], Toast.LENGTH_SHORT).show();
                     }
