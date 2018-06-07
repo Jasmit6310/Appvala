@@ -76,8 +76,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_disabled"
-                android:inputType="numberDecimal"
-                android:text="0" />
+                android:inputType="numberDecimal" />
 
         </LinearLayout>
 
@@ -107,8 +106,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_disabled"
-                android:inputType="numberDecimal"
-                android:text="0" />
+                android:inputType="numberDecimal" />
 
         </LinearLayout>
 
@@ -138,8 +136,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_disabled"
-                android:inputType="numberDecimal"
-                android:text="0" />
+                android:inputType="numberDecimal" />
 
         </LinearLayout>
 
@@ -169,8 +166,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_disabled"
-                android:inputType="numberDecimal"
-                android:text="0" />
+                android:inputType="numberDecimal" />
 
         </LinearLayout>
 
@@ -200,8 +196,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_disabled"
-                android:inputType="numberDecimal"
-                android:text="0" />
+                android:inputType="numberDecimal" />
 
         </LinearLayout>
 
@@ -231,8 +226,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_disabled"
-                android:inputType="numberDecimal"
-                android:text="0" />
+                android:inputType="numberDecimal" />
 
         </LinearLayout>
 
@@ -262,8 +256,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_disabled"
-                android:inputType="numberDecimal"
-                android:text="0" />
+                android:inputType="numberDecimal" />
 
         </LinearLayout>
 
@@ -293,8 +286,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_disabled"
-                android:inputType="numberDecimal"
-                android:text="0" />
+                android:inputType="numberDecimal" />
 
         </LinearLayout>
 
@@ -324,8 +316,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_disabled"
-                android:inputType="numberDecimal"
-                android:text="0" />
+                android:inputType="numberDecimal" />
 
         </LinearLayout>
 
@@ -355,8 +346,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_disabled"
-                android:inputType="numberDecimal"
-                android:text="0" />
+                android:inputType="numberDecimal" />
 
         </LinearLayout>
 
