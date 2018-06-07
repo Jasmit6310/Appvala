@@ -175,14 +175,13 @@ public class friendslist extends AppCompatActivity {
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                total_amount=0;
+                total_amount = 0;
                 for (int i = 0; i < num_of_enables; i++) {
                     if (paid[i].isChecked()) {
                         amo_str = amounts[i].getText().toString();
-                        if(amo_str.matches((""))) {
+                        if (amo_str.matches((""))) {
                             Toast.makeText(friendslist.this, "Please enter the amount in all the boxes in which you have checked ", Toast.LENGTH_SHORT).show();
-                        }
-                        else {
+                        } else {
                             temp = Integer.parseInt(amo_str);
                             amo[i] = temp;
                             total_amount += amo[i];
@@ -192,8 +191,8 @@ public class friendslist extends AppCompatActivity {
 
                 }
 
-                /*if (!check_for_null_amount(paid_amount, total_checked,paid)) {
-                    Toast.makeText(getApplicationContext(), "The amount field cannot be left blanck once it is selected!", Toast.LENGTH_LONG).show();
+                /*if (!check_for_null_amount(paid_amount, total_checked, paid)) {
+                    Toast.makeText(getApplicationContext(), "The amount field cannot be left blank once it is selected!", Toast.LENGTH_LONG).show();
                 } else {*/
                     devided_amount = total_amount / num_of_enables;      // amount which  everyone has to pay
                     Toast.makeText(friendslist.this, "enable " + num_of_enables, Toast.LENGTH_SHORT).show();
@@ -224,7 +223,7 @@ public class friendslist extends AppCompatActivity {
                             q1++;
                         } else {
                             nutral[q2] = i;
-                            paid_amount[i]=0;
+                            paid_amount[i] = 0;
                             q2++;
                         }
                     }
@@ -246,12 +245,17 @@ public class friendslist extends AppCompatActivity {
                     else {
                     }
                     //  Toast.makeText(friendslist.this, "total amount " + total_amount, Toast.LENGTH_SHORT).show();
-
+                    //dkfjisifj
+                    //kdsjfldgijsldkjg
+                    //aliuwerwuiertj
+                //jfdgsdifjgsieerijg
+                //aejf,dfmnakjwej
+                //ksfnakjsdfkajf
 
                     // jene levana 6 ene priority apishu
                     int x = 0, x1 = 0, x2 = 0;
 
-                    if(q2!=num_of_enables) {
+                    if (q2 != num_of_enables) {
                         for (int i = 0; i < q1; i++) {
                             if (x1 <= q1) {
                                 while (paid_amount[levana[x1]] != 0 && x < q) {
@@ -280,9 +284,8 @@ public class friendslist extends AppCompatActivity {
                             x1++;
 
                         }
-                    }
-                    else{
-                        result[x2]="Everyone has paid their respective amounts";
+                    } else {
+                        result[x2] = "Everyone has paid their respective amounts";
                         x2++;
                     }
 
@@ -296,7 +299,7 @@ public class friendslist extends AppCompatActivity {
         });
     }
 
-   /* public boolean check_for_null_amount(int enables, CheckBox ispaid[]){
+   public boolean check_for_null_amount(int enables, CheckBox ispaid[]){
         int i;
         boolean ans=true;
         for(i=0;i<enables;i++)
@@ -307,7 +310,7 @@ public class friendslist extends AppCompatActivity {
                 }
         }
         return ans;
-    }*/
+    }
 
     public boolean check_for_boxes() {
         // Checks if at least one box is checked!
