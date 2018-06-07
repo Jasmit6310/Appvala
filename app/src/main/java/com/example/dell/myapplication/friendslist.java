@@ -275,6 +275,7 @@ public class friendslist extends AppCompatActivity {
 
                 for (int i = 0; i < q1; i++) {
 
+
                     while (paid_amount[levana[x1]] != 0 && x < q) {
 
                         if (paid_amount[levana[x1]] < paid_amount[devana[x]])
