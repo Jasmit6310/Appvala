@@ -99,8 +99,8 @@ public class first_page extends AppCompatActivity {
                 s = R2.getText().toString();
                 Intent k=new Intent(first_page.this, friendslist.class);
                 k.putExtra("number",s);
-                int swr = Integer.parseInt(s);
-                Toast.makeText(getApplicationContext(),"the number is " + s,Toast.LENGTH_SHORT).show();
+                //int swr = Integer.parseInt(s);
+                //Toast.makeText(getApplicationContext(),"the number is " + s,Toast.LENGTH_SHORT).show();
                 //Toast.makeText(first_page.this, "Split between 2", Toast.LENGTH_SHORT).show();
                 startActivity(k);
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);

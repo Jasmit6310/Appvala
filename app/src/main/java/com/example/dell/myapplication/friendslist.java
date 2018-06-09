@@ -206,7 +206,7 @@ public class friendslist extends AppCompatActivity {
         num_of_enables = Integer.parseInt(getIntent().getStringExtra("number"));
         String inp= Integer.toString(num_of_enables);
 
-        Toast.makeText(getApplicationContext(),inp,Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getApplicationContext(),inp,Toast.LENGTH_SHORT).show();
         //Toast.makeText(getApplicationContext(),num_of_enables,Toast.LENGTH_SHORT).show();
 
         for (int i = 0; i < num_of_enables; i++)
