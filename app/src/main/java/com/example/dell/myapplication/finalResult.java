@@ -81,7 +81,7 @@ public class finalResult extends AppCompatActivity {
             else {
                 number = Integer.parseInt(limit);
 
-                Toast.makeText(this, "the hint is " + number, Toast.LENGTH_SHORT).show();
+               // Toast.makeText(this, "the hint is " + number, Toast.LENGTH_SHORT).show();
 
 
                 result_arr = new String[number];
