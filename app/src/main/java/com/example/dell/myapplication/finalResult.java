@@ -118,15 +118,15 @@ public class finalResult extends AppCompatActivity {
    public void onBackPressed(){
         AlertDialog.Builder builder = new AlertDialog.Builder(finalResult.this);
         builder.setCancelable(true);
-        builder.setMessage("Are you sure you want to generate a new query?");
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        builder.setMessage("What do you want to do?");
+        builder.setNegativeButton("Quit", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
+                finish();
             }
         });
 
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Generate a query", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 startActivity(new Intent(finalResult.this,first_page.class));
