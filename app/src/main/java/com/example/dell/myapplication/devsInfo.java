@@ -47,7 +47,7 @@ public class devsInfo extends AppCompatActivity {
                 Intent neo = new Intent();
                 neo.setAction(Intent.ACTION_VIEW);
                 neo.addCategory(Intent.CATEGORY_BROWSABLE);
-                neo.setData(Uri.parse(""));
+                neo.setData(Uri.parse("https://www.linkedin.com/in/jaydeep-kakadiya-10a426166/"));
                 startActivity(neo);
             }
         });
