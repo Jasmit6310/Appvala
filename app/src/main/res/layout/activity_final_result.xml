@@ -182,12 +182,6 @@
         android:textSize="22sp"/>
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:text="tv1"
-        android:id="@+id/tv_21"
-        android:textSize="22sp"/>
 
 
 
