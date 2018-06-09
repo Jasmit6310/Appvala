@@ -4,14 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/btn_go_to_list"
+        android:id="@+id/btn_quit"
         app:showAsAction="always"
-        android:title="Generate a new List?"/>
+        android:title="Quit?"/>
 
-    <item
-        android:title="Devs' Info"
-        app:showAsAction="ifRoom"
-        android:id="@+id/developer"
-        />
 
 </menu>

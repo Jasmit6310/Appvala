@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/btn_first_page"
+        app:showAsAction="always"
+        android:orderInCategory="100"
+        android:title="Main Page"
+        />
+
+   <!-- <item
+        android:id="@+id/exit_btn"
+        app:showAsAction="never"
+        android:orderInCategory="200"
+        android:title="Quit"
+        />-->
+    
+
+</menu>

@@ -10,9 +10,9 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class final_result extends AppCompatActivity {
+public class finalResult extends AppCompatActivity {
 
-    private String limit;
+
     private int var_limit;
     private String [] result_arr;
     private TextView [] tv_list;
@@ -31,7 +31,7 @@ public class final_result extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.btn_go_to_list: {
-                AlertDialog.Builder builder = new AlertDialog.Builder(final_result.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(finalResult.this);
                 builder.setCancelable(true);
                 builder.setMessage("Are you sure you want to generate a new query?");
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -44,13 +44,19 @@ public class final_result extends AppCompatActivity {
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(final_result.this,first_page.class));
+                        startActivity(new Intent(finalResult.this,first_page.class));
                         finish();
                     }
                 });
 
                 AlertDialog alert = builder.create();
                 alert.show();
+                break;
+            }
+
+            case R.id.developer: {
+                startActivity(new Intent(getApplicationContext(),devsInfo.class));
+                finish();
             }
         }
 
@@ -58,55 +64,59 @@ public class final_result extends AppCompatActivity {
         return true;
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_result);
 
+        String limit;
+
         Intent neo = getIntent();
-        limit = neo.getStringExtra("limit");
+        limit = neo.getStringExtra("limits");
         //Toast.makeText(getApplicationContext(),limit,Toast.LENGTH_LONG).show();
-        number = Integer.parseInt(limit);
+            if (limit == null){
+                Toast.makeText(getApplicationContext(),"Won't work!",Toast.LENGTH_SHORT).show();
+            }
+            else {
+                number = Integer.parseInt(limit);
+
+                Toast.makeText(this, "the hint is " + number, Toast.LENGTH_SHORT).show();
 
 
+                result_arr = new String[number];
+                tv_list = new TextView[22];
+                result_arr = neo.getStringArrayExtra("result_ans");
 
-        result_arr = new String[number];
-        tv_list = new TextView[22];
-        result_arr = neo.getStringArrayExtra("result_ans");
-
-        setID();
-
-
-        for(int i=0;i<number;i++){
-            Toast.makeText(getApplicationContext(),result_arr[i],Toast.LENGTH_LONG).show();
-        }
-
-        for(int i=0;i<21;i++){
-            tv_list[i].setText("");
-        }
-
-        for(int i=0;i<number;i++){
-            tv_list[i].setText(result_arr[i]);
-        }
+                setID();
 
 
-        //Toast.makeText(getApplicationContext(),n,Toast.LENGTH_LONG).show();
-        //result_arr = new String[n];
-        //result_arr = neo.getStringArrayExtra("results_ans");
+                //for(int i=0;i<number;i++){
+                //  Toast.makeText(getApplicationContext(),result_arr[i],Toast.LENGTH_LONG).show();
+                //}
 
+                for (int i = 0; i < 21; i++) {
+                    tv_list[i].setText("");
+                }
 
-        //Toast.makeText(getApplicationContext(),result_arr[0],Toast.LENGTH_LONG).show();
+                for (int i = 0; i < number; i++) {
+                    tv_list[i].setText(result_arr[i]);
+                }
+
+                for(int i=0;i<number;i++){
+                    Toast.makeText(getApplicationContext(),result_arr[i],Toast.LENGTH_SHORT).show();
+                }
 
 
 //        for(int i=0;i<n;i++){
 //            Toast.makeText(getApplicationContext(),result_arr[i],Toast.LENGTH_LONG).show();
 //        }
 
-
+            }
     }
 
-    public void onBackPressed(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(final_result.this);
+   public void onBackPressed(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(finalResult.this);
         builder.setCancelable(true);
         builder.setMessage("Are you sure you want to generate a new query?");
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -119,7 +129,7 @@ public class final_result extends AppCompatActivity {
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(final_result.this,first_page.class));
+                startActivity(new Intent(finalResult.this,first_page.class));
                 finish();
             }
         });

@@ -42,6 +42,10 @@ public class friendslist extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.go_menu_btn: {
 
+                for(int i=0;i<num_of_enables;i++){
+                    amo[i]=0;
+                }
+
 
                 int were=1;
                 total_amount = 0;
@@ -167,9 +171,9 @@ public class friendslist extends AppCompatActivity {
                 }*/
                         String var_limit = Integer.toString(x2);
                         if(were==1) {
-                            Intent neo = new Intent(getApplicationContext(), final_result.class);
+                            Intent neo = new Intent(getApplicationContext(), finalResult.class);
                             neo.putExtra("result_ans", result);
-                            neo.putExtra("limit", var_limit);
+                            neo.putExtra("limits", var_limit);
                             startActivity(neo);
                             overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                             finish();
@@ -200,6 +204,10 @@ public class friendslist extends AppCompatActivity {
         }
 
         num_of_enables = Integer.parseInt(getIntent().getStringExtra("number"));
+        String inp= Integer.toString(num_of_enables);
+
+        Toast.makeText(getApplicationContext(),inp,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),num_of_enables,Toast.LENGTH_SHORT).show();
 
         for (int i = 0; i < num_of_enables; i++)
             names[i].setText("");
