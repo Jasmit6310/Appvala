@@ -9,9 +9,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/icon"
+        android:icon="@mipmap/iconmain_round_round"
         android:label="Bill Splitter"
-        android:roundIcon="@drawable/icon"
+        android:roundIcon="@mipmap/iconmain_round_round"
         android:supportsRtl="true">
         <activity
             android:name=".MainActivity"
