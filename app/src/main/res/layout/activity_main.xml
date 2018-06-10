@@ -2,23 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#f7f9fa"
-    android:layout_width="match_parent"
-    >
-
-
-    <TextView
-        android:id="@+id/editText"
+    android:background="#d8e6d6"
+    android:layout_width="match_parent">
+    
+    <ImageView
         android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:ems="13"
-        android:fontFamily="serif"
-        android:inputType="textPersonName"
-        android:text="Bill Splliter"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:typeface="monospace"
-        />
+        android:src="@drawable/icon"/>
+
+    <!--<TextView-->
+        <!--android:id="@+id/editText"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:ems="13"-->
+        <!--android:fontFamily="serif"-->
+        <!--android:inputType="textPersonName"-->
+        <!--android:text="Bill Splliter"-->
+        <!--android:textColor="@android:color/holo_red_dark"-->
+        <!--android:textSize="28sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:typeface="monospace" />-->
+    <!---->
 </LinearLayout>
