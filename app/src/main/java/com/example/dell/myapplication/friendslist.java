@@ -107,7 +107,7 @@ public class friendslist extends AppCompatActivity {
                         //E raja raja raja kaleja me samaja
 
                        for (int i = 0; i < num_of_enables; i++) {
-                            username[i] = names[i].getText().toString();
+                            username[i] = names[i].getText().toString().trim();
                         }
 
                         if (!check_for_boxes()) {
