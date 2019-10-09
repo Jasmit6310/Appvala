@@ -1,0 +1,1 @@
+This app is used for splitting the bill among the friends upto a total of 10. Used simple UI and a good and efficient algorithm.
